@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PIM3_SEMESTRE
+namespace PIM3_SEMESTRE.fornecedor
 {
-    public partial class Form1 : Form
+    public partial class tela_fornecedor1cs : Form
     {
-        public Form1()
+        public tela_fornecedor1cs()
         {
             InitializeComponent();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
