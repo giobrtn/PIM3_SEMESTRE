@@ -1,6 +1,6 @@
-﻿namespace PIM3_SEMESTRE.cliente
+﻿namespace PIM3_SEMESTRE.vendas
 {
-    partial class tela_cliente
+    partial class tela_venda_histórico_
     {
         /// <summary>
         /// Required designer variable.
@@ -55,16 +55,16 @@
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(534, 163);
+            this.panel1.Location = new System.Drawing.Point(533, 150);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1065, 765);
+            this.panel1.Size = new System.Drawing.Size(1036, 765);
             this.panel1.TabIndex = 18;
             // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(638, 680);
+            this.button1.Location = new System.Drawing.Point(618, 652);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(152, 53);
             this.button1.TabIndex = 19;
@@ -75,7 +75,7 @@
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(850, 680);
+            this.button2.Location = new System.Drawing.Point(829, 652);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(152, 53);
             this.button2.TabIndex = 18;
@@ -86,7 +86,7 @@
             // 
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(418, 680);
+            this.button10.Location = new System.Drawing.Point(405, 652);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(152, 53);
             this.button10.TabIndex = 17;
@@ -96,7 +96,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(49, 123);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
@@ -109,9 +109,9 @@
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(63, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 41);
+            this.label1.Size = new System.Drawing.Size(279, 41);
             this.label1.TabIndex = 9;
-            this.label1.Text = "Clientes";
+            this.label1.Text = "Histórico de vendas";
             // 
             // panel2
             // 
@@ -122,10 +122,10 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
-            this.panel2.Location = new System.Drawing.Point(72, 163);
+            this.panel2.Location = new System.Drawing.Point(76, 150);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(400, 765);
-            this.panel2.TabIndex = 24;
+            this.panel2.Size = new System.Drawing.Size(400, 778);
+            this.panel2.TabIndex = 19;
             // 
             // button3
             // 
@@ -190,13 +190,14 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(65, 55);
+            this.label8.Location = new System.Drawing.Point(69, 47);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(163, 41);
-            this.label8.TabIndex = 25;
+            this.label8.TabIndex = 23;
             this.label8.Text = "Nome App";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // tela_cliente
+            // tela_venda_histórico_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -205,8 +206,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "tela_cliente";
-            this.Text = "tela_cliente";
+            this.Name = "tela_venda_histórico_";
+            this.Text = "tela_venda_histórico_";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

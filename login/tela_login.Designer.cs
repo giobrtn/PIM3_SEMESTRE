@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,10 +47,31 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(449, 126);
+            this.panel1.Location = new System.Drawing.Point(542, 215);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(549, 504);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(193, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(163, 41);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Nome App";
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(200, 386);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(152, 53);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Entrar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -89,33 +110,12 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Login";
             // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(200, 386);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 53);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Entrar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(193, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 41);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Nome App";
-            // 
             // tela_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.ClientSize = new System.Drawing.Size(1424, 799);
+            this.ClientSize = new System.Drawing.Size(1658, 994);
             this.Controls.Add(this.panel1);
             this.Name = "tela_login";
             this.Text = "tela_login";
