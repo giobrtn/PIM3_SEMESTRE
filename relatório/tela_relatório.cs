@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PIM3_SEMESTRE.vendas
+namespace PIM3_SEMESTRE.relatório
 {
-    public partial class tela_vendas_histórico : Form
+    public partial class tela_relatório : Form
     {
-        public tela_vendas_histórico()
+        public tela_relatório()
         {
             InitializeComponent();
-        }
-
-        private void tela_vendas_histórico_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

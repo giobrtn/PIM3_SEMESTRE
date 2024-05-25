@@ -63,6 +63,56 @@ namespace PIM3_SEMESTRE.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_PIM {
+            get {
+                object obj = ResourceManager.GetObject("icon-PIM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_notification_alert_both_on_phone_and_tablet_pc_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notification-alert-both-on-phone-and-tablet-pc-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_notification_alert_both_on_phone_and_tablet_pc_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notification-alert-both-on-phone-and-tablet-pc-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_notification_alert_both_on_phone_and_tablet_pc_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-notification-alert-both-on-phone-and-tablet-pc-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_organic_food_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-organic-food-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap notification_app_11940020 {
             get {
                 object obj = ResourceManager.GetObject("notification-app_11940020", resourceCulture);

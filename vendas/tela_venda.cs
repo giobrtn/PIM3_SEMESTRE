@@ -16,5 +16,10 @@ namespace PIM3_SEMESTRE.vendas
         {
             InitializeComponent();
         }
+
+        private void tela_venda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

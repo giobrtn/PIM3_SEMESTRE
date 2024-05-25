@@ -76,6 +76,12 @@
     <Compile Include="login\tela_login.Designer.cs">
       <DependentUpon>tela_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="notificações\tela_notificações.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notificações\tela_notificações.Designer.cs">
+      <DependentUpon>tela_notificações.cs</DependentUpon>
+    </Compile>
     <Compile Include="produção\tela_producao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="relatório\tela_relatório.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="relatório\tela_relatório.Designer.cs">
+      <DependentUpon>tela_relatório.cs</DependentUpon>
+    </Compile>
+    <Compile Include="relatório\tela_relatório_adicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="relatório\tela_relatório_adicionar.Designer.cs">
+      <DependentUpon>tela_relatório_adicionar.cs</DependentUpon>
+    </Compile>
     <Compile Include="vendas\tela_venda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +135,9 @@
     <EmbeddedResource Include="login\tela_login.resx">
       <DependentUpon>tela_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="notificações\tela_notificações.resx">
+      <DependentUpon>tela_notificações.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="produção\tela_producao.resx">
       <DependentUpon>tela_producao.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,7 +152,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="relatório\tela_relatório.resx">
+      <DependentUpon>tela_relatório.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="relatório\tela_relatório_adicionar.resx">
+      <DependentUpon>tela_relatório_adicionar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vendas\tela_venda.resx">
       <DependentUpon>tela_venda.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +178,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-alert-both-on-phone-and-tablet-pc-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-alert-both-on-phone-and-tablet-pc-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-alert-both-on-phone-and-tablet-pc-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-organic-food-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icon-PIM.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
