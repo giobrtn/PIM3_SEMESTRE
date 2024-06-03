@@ -30,33 +30,33 @@
         {
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox_data = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox_fornecedor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.button_cancelar = new System.Windows.Forms.Button();
+            this.textBox_usuario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox_quantidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox4_estacao_preferencial = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_tipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_categoria = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_nome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_adicionar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button_notificacao = new System.Windows.Forms.Button();
+            this.button_producao = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
+            this.button_relatorio = new System.Windows.Forms.Button();
+            this.button_vendas = new System.Windows.Forms.Button();
+            this.button_cliente = new System.Windows.Forms.Button();
+            this.button_fornecedor = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,39 +78,39 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox8);
+            this.panel1.Controls.Add(this.textBox_data);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.textBox_fornecedor);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.button_cancelar);
+            this.panel1.Controls.Add(this.textBox_usuario);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.textBox_quantidade);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.textBox4_estacao_preferencial);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox_tipo);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox_categoria);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBox_nome);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button_adicionar);
             this.panel1.Location = new System.Drawing.Point(356, 110);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 498);
             this.panel1.TabIndex = 23;
             // 
-            // textBox8
+            // textBox_data
             // 
-            this.textBox8.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(300, 239);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(104, 23);
-            this.textBox8.TabIndex = 18;
+            this.textBox_data.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_data.Location = new System.Drawing.Point(300, 239);
+            this.textBox_data.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_data.Name = "textBox_data";
+            this.textBox_data.Size = new System.Drawing.Size(104, 23);
+            this.textBox_data.TabIndex = 18;
             // 
             // label9
             // 
@@ -123,14 +123,14 @@
             this.label9.TabIndex = 17;
             this.label9.Text = "Data";
             // 
-            // textBox7
+            // textBox_fornecedor
             // 
-            this.textBox7.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(97, 318);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(175, 23);
-            this.textBox7.TabIndex = 16;
+            this.textBox_fornecedor.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_fornecedor.Location = new System.Drawing.Point(97, 318);
+            this.textBox_fornecedor.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_fornecedor.Name = "textBox_fornecedor";
+            this.textBox_fornecedor.Size = new System.Drawing.Size(175, 23);
+            this.textBox_fornecedor.TabIndex = 16;
             // 
             // label8
             // 
@@ -143,26 +143,26 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Fornecedor";
             // 
-            // button2
+            // button_cancelar
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(454, 441);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 34);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_cancelar.FlatAppearance.BorderSize = 0;
+            this.button_cancelar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cancelar.Location = new System.Drawing.Point(454, 441);
+            this.button_cancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.button_cancelar.Name = "button_cancelar";
+            this.button_cancelar.Size = new System.Drawing.Size(101, 34);
+            this.button_cancelar.TabIndex = 14;
+            this.button_cancelar.Text = "Cancelar";
+            this.button_cancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // textBox_usuario
             // 
-            this.textBox6.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(441, 239);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 23);
-            this.textBox6.TabIndex = 13;
+            this.textBox_usuario.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_usuario.Location = new System.Drawing.Point(441, 239);
+            this.textBox_usuario.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_usuario.Name = "textBox_usuario";
+            this.textBox_usuario.Size = new System.Drawing.Size(124, 23);
+            this.textBox_usuario.TabIndex = 13;
             // 
             // label7
             // 
@@ -186,14 +186,14 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Cadastrar Produto";
             // 
-            // textBox5
+            // textBox_quantidade
             // 
-            this.textBox5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(301, 318);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(76, 23);
-            this.textBox5.TabIndex = 10;
+            this.textBox_quantidade.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_quantidade.Location = new System.Drawing.Point(301, 318);
+            this.textBox_quantidade.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_quantidade.Name = "textBox_quantidade";
+            this.textBox_quantidade.Size = new System.Drawing.Size(76, 23);
+            this.textBox_quantidade.TabIndex = 10;
             // 
             // label5
             // 
@@ -206,14 +206,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Quantidade";
             // 
-            // textBox4
+            // textBox4_estacao_preferencial
             // 
-            this.textBox4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(97, 239);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(175, 23);
-            this.textBox4.TabIndex = 8;
+            this.textBox4_estacao_preferencial.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4_estacao_preferencial.Location = new System.Drawing.Point(97, 239);
+            this.textBox4_estacao_preferencial.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4_estacao_preferencial.Name = "textBox4_estacao_preferencial";
+            this.textBox4_estacao_preferencial.Size = new System.Drawing.Size(175, 23);
+            this.textBox4_estacao_preferencial.TabIndex = 8;
             // 
             // label4
             // 
@@ -226,14 +226,14 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Estação Preferencial";
             // 
-            // textBox3
+            // textBox_tipo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(441, 159);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 23);
-            this.textBox3.TabIndex = 6;
+            this.textBox_tipo.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_tipo.Location = new System.Drawing.Point(441, 159);
+            this.textBox_tipo.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_tipo.Name = "textBox_tipo";
+            this.textBox_tipo.Size = new System.Drawing.Size(124, 23);
+            this.textBox_tipo.TabIndex = 6;
             // 
             // label3
             // 
@@ -246,14 +246,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Tipo";
             // 
-            // textBox2
+            // textBox_categoria
             // 
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(300, 159);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(115, 23);
-            this.textBox2.TabIndex = 4;
+            this.textBox_categoria.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_categoria.Location = new System.Drawing.Point(300, 159);
+            this.textBox_categoria.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_categoria.Name = "textBox_categoria";
+            this.textBox_categoria.Size = new System.Drawing.Size(115, 23);
+            this.textBox_categoria.TabIndex = 4;
             // 
             // label2
             // 
@@ -266,14 +266,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Categoria";
             // 
-            // textBox1
+            // textBox_nome
             // 
-            this.textBox1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(97, 159);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 23);
-            this.textBox1.TabIndex = 2;
+            this.textBox_nome.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_nome.Location = new System.Drawing.Point(97, 159);
+            this.textBox_nome.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_nome.Name = "textBox_nome";
+            this.textBox_nome.Size = new System.Drawing.Size(175, 23);
+            this.textBox_nome.TabIndex = 2;
             // 
             // label1
             // 
@@ -286,136 +286,136 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
-            // button1
+            // button_adicionar
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(583, 441);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 34);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Adicionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_adicionar.FlatAppearance.BorderSize = 0;
+            this.button_adicionar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_adicionar.Location = new System.Drawing.Point(583, 441);
+            this.button_adicionar.Margin = new System.Windows.Forms.Padding(2);
+            this.button_adicionar.Name = "button_adicionar";
+            this.button_adicionar.Size = new System.Drawing.Size(101, 34);
+            this.button_adicionar.TabIndex = 0;
+            this.button_adicionar.Text = "Adicionar";
+            this.button_adicionar.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button_notificacao);
+            this.panel2.Controls.Add(this.button_producao);
+            this.panel2.Controls.Add(this.button_sair);
+            this.panel2.Controls.Add(this.button_relatorio);
+            this.panel2.Controls.Add(this.button_vendas);
+            this.panel2.Controls.Add(this.button_cliente);
+            this.panel2.Controls.Add(this.button_fornecedor);
             this.panel2.Location = new System.Drawing.Point(46, 110);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 497);
             this.panel2.TabIndex = 30;
             // 
-            // button3
+            // button_notificacao
             // 
-            this.button3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(23, 365);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 42);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Produção";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_notificacao.BackColor = System.Drawing.Color.DarkGreen;
+            this.button_notificacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_notificacao.FlatAppearance.BorderSize = 0;
+            this.button_notificacao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_notificacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_notificacao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_notificacao.Image = global::PIM3_SEMESTRE.Properties.Resources.icons8_notification_alert_both_on_phone_and_tablet_pc_24;
+            this.button_notificacao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_notificacao.Location = new System.Drawing.Point(23, 37);
+            this.button_notificacao.Margin = new System.Windows.Forms.Padding(2);
+            this.button_notificacao.Name = "button_notificacao";
+            this.button_notificacao.Size = new System.Drawing.Size(221, 42);
+            this.button_notificacao.TabIndex = 23;
+            this.button_notificacao.Text = "Notificações";
+            this.button_notificacao.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // button_producao
             // 
-            this.button8.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(23, 426);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(167, 42);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "Sair";
-            this.button8.UseVisualStyleBackColor = false;
+            this.button_producao.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_producao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_producao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_producao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_producao.Location = new System.Drawing.Point(23, 365);
+            this.button_producao.Margin = new System.Windows.Forms.Padding(2);
+            this.button_producao.Name = "button_producao";
+            this.button_producao.Size = new System.Drawing.Size(167, 42);
+            this.button_producao.TabIndex = 22;
+            this.button_producao.Text = "Produção";
+            this.button_producao.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button_sair
             // 
-            this.button7.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(23, 304);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(167, 42);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Relatório";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_sair.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_sair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_sair.Location = new System.Drawing.Point(23, 426);
+            this.button_sair.Margin = new System.Windows.Forms.Padding(2);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(167, 42);
+            this.button_sair.TabIndex = 21;
+            this.button_sair.Text = "Sair";
+            this.button_sair.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // button_relatorio
             // 
-            this.button6.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(23, 243);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(167, 42);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Vendas";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button_relatorio.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_relatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_relatorio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_relatorio.Location = new System.Drawing.Point(23, 304);
+            this.button_relatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.button_relatorio.Name = "button_relatorio";
+            this.button_relatorio.Size = new System.Drawing.Size(167, 42);
+            this.button_relatorio.TabIndex = 20;
+            this.button_relatorio.Text = "Relatório";
+            this.button_relatorio.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button_vendas
             // 
-            this.button5.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(23, 182);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 42);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Clientes";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button_vendas.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_vendas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_vendas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_vendas.Location = new System.Drawing.Point(23, 243);
+            this.button_vendas.Margin = new System.Windows.Forms.Padding(2);
+            this.button_vendas.Name = "button_vendas";
+            this.button_vendas.Size = new System.Drawing.Size(167, 42);
+            this.button_vendas.TabIndex = 19;
+            this.button_vendas.Text = "Vendas";
+            this.button_vendas.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button_cliente
             // 
-            this.button4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(23, 121);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 42);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Fornecedores";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_cliente.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_cliente.Location = new System.Drawing.Point(23, 182);
+            this.button_cliente.Margin = new System.Windows.Forms.Padding(2);
+            this.button_cliente.Name = "button_cliente";
+            this.button_cliente.Size = new System.Drawing.Size(167, 42);
+            this.button_cliente.TabIndex = 18;
+            this.button_cliente.Text = "Clientes";
+            this.button_cliente.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // button_fornecedor
             // 
-            this.button9.BackColor = System.Drawing.Color.DarkGreen;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Image = global::PIM3_SEMESTRE.Properties.Resources.icons8_notification_alert_both_on_phone_and_tablet_pc_24;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(23, 37);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(221, 42);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "Notificações";
-            this.button9.UseVisualStyleBackColor = false;
+            this.button_fornecedor.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_fornecedor.FlatAppearance.BorderSize = 0;
+            this.button_fornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_fornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_fornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_fornecedor.Location = new System.Drawing.Point(23, 121);
+            this.button_fornecedor.Margin = new System.Windows.Forms.Padding(2);
+            this.button_fornecedor.Name = "button_fornecedor";
+            this.button_fornecedor.Size = new System.Drawing.Size(167, 42);
+            this.button_fornecedor.TabIndex = 17;
+            this.button_fornecedor.Text = "Fornecedores";
+            this.button_fornecedor.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
@@ -444,7 +444,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tela_produção_adicionar";
             this.Text = "tela_produção_adicionar";
             this.panel1.ResumeLayout(false);
@@ -458,33 +458,33 @@
         #endregion
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox_data;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox_fornecedor;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button button_cancelar;
+        private System.Windows.Forms.TextBox textBox_usuario;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox_quantidade;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox4_estacao_preferencial;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_tipo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_categoria;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox_nome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_adicionar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_notificacao;
+        private System.Windows.Forms.Button button_producao;
+        private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.Button button_relatorio;
+        private System.Windows.Forms.Button button_vendas;
+        private System.Windows.Forms.Button button_cliente;
+        private System.Windows.Forms.Button button_fornecedor;
         private System.Windows.Forms.Button button11;
     }
 }

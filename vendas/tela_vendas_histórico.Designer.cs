@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button_editar = new System.Windows.Forms.Button();
+            this.button_adicionar = new System.Windows.Forms.Button();
+            this.button_remover = new System.Windows.Forms.Button();
+            this.dataGridView_historico_vendas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.button_notificacao = new System.Windows.Forms.Button();
+            this.button_producao = new System.Windows.Forms.Button();
+            this.button_sair = new System.Windows.Forms.Button();
+            this.button_relatorio = new System.Windows.Forms.Button();
+            this.button_vendas = new System.Windows.Forms.Button();
+            this.button_cliente = new System.Windows.Forms.Button();
+            this.button_fornecedor = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_historico_vendas)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,63 +53,63 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.button_editar);
+            this.panel1.Controls.Add(this.button_adicionar);
+            this.panel1.Controls.Add(this.button_remover);
+            this.panel1.Controls.Add(this.dataGridView_historico_vendas);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(359, 110);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 498);
             this.panel1.TabIndex = 24;
             // 
-            // button1
+            // button_editar
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(426, 429);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 34);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Editar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_editar.FlatAppearance.BorderSize = 0;
+            this.button_editar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_editar.Location = new System.Drawing.Point(426, 429);
+            this.button_editar.Margin = new System.Windows.Forms.Padding(2);
+            this.button_editar.Name = "button_editar";
+            this.button_editar.Size = new System.Drawing.Size(101, 34);
+            this.button_editar.TabIndex = 24;
+            this.button_editar.Text = "Editar";
+            this.button_editar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button_adicionar
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(564, 429);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 34);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_adicionar.FlatAppearance.BorderSize = 0;
+            this.button_adicionar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_adicionar.Location = new System.Drawing.Point(564, 429);
+            this.button_adicionar.Margin = new System.Windows.Forms.Padding(2);
+            this.button_adicionar.Name = "button_adicionar";
+            this.button_adicionar.Size = new System.Drawing.Size(101, 34);
+            this.button_adicionar.TabIndex = 23;
+            this.button_adicionar.Text = "Adicionar";
+            this.button_adicionar.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // button_remover
             // 
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(286, 429);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(101, 34);
-            this.button10.TabIndex = 22;
-            this.button10.Text = "Remover";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button_remover.FlatAppearance.BorderSize = 0;
+            this.button_remover.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_remover.Location = new System.Drawing.Point(286, 429);
+            this.button_remover.Margin = new System.Windows.Forms.Padding(2);
+            this.button_remover.Name = "button_remover";
+            this.button_remover.Size = new System.Drawing.Size(101, 34);
+            this.button_remover.TabIndex = 22;
+            this.button_remover.Text = "Remover";
+            this.button_remover.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridView_historico_vendas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 75);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(621, 318);
-            this.dataGridView1.TabIndex = 21;
+            this.dataGridView_historico_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_historico_vendas.Location = new System.Drawing.Point(44, 75);
+            this.dataGridView_historico_vendas.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_historico_vendas.Name = "dataGridView_historico_vendas";
+            this.dataGridView_historico_vendas.RowHeadersWidth = 62;
+            this.dataGridView_historico_vendas.RowTemplate.Height = 28;
+            this.dataGridView_historico_vendas.Size = new System.Drawing.Size(621, 318);
+            this.dataGridView_historico_vendas.TabIndex = 21;
             // 
             // label1
             // 
@@ -125,121 +125,121 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.button_notificacao);
+            this.panel2.Controls.Add(this.button_producao);
+            this.panel2.Controls.Add(this.button_sair);
+            this.panel2.Controls.Add(this.button_relatorio);
+            this.panel2.Controls.Add(this.button_vendas);
+            this.panel2.Controls.Add(this.button_cliente);
+            this.panel2.Controls.Add(this.button_fornecedor);
             this.panel2.Location = new System.Drawing.Point(46, 110);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(267, 497);
             this.panel2.TabIndex = 30;
             // 
-            // button3
+            // button_notificacao
             // 
-            this.button3.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(23, 365);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 42);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Produção";
-            this.button3.UseVisualStyleBackColor = false;
+            this.button_notificacao.BackColor = System.Drawing.Color.DarkGreen;
+            this.button_notificacao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_notificacao.FlatAppearance.BorderSize = 0;
+            this.button_notificacao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_notificacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_notificacao.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button_notificacao.Image = global::PIM3_SEMESTRE.Properties.Resources.icons8_notification_alert_both_on_phone_and_tablet_pc_24;
+            this.button_notificacao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_notificacao.Location = new System.Drawing.Point(23, 37);
+            this.button_notificacao.Margin = new System.Windows.Forms.Padding(2);
+            this.button_notificacao.Name = "button_notificacao";
+            this.button_notificacao.Size = new System.Drawing.Size(221, 42);
+            this.button_notificacao.TabIndex = 23;
+            this.button_notificacao.Text = "Notificações";
+            this.button_notificacao.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // button_producao
             // 
-            this.button8.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.Location = new System.Drawing.Point(23, 426);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(167, 42);
-            this.button8.TabIndex = 21;
-            this.button8.Text = "Sair";
-            this.button8.UseVisualStyleBackColor = false;
+            this.button_producao.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_producao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_producao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_producao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_producao.Location = new System.Drawing.Point(23, 365);
+            this.button_producao.Margin = new System.Windows.Forms.Padding(2);
+            this.button_producao.Name = "button_producao";
+            this.button_producao.Size = new System.Drawing.Size(167, 42);
+            this.button_producao.TabIndex = 22;
+            this.button_producao.Text = "Produção";
+            this.button_producao.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // button_sair
             // 
-            this.button7.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.Location = new System.Drawing.Point(23, 304);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(167, 42);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Relatório";
-            this.button7.UseVisualStyleBackColor = false;
+            this.button_sair.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_sair.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_sair.Location = new System.Drawing.Point(23, 426);
+            this.button_sair.Margin = new System.Windows.Forms.Padding(2);
+            this.button_sair.Name = "button_sair";
+            this.button_sair.Size = new System.Drawing.Size(167, 42);
+            this.button_sair.TabIndex = 21;
+            this.button_sair.Text = "Sair";
+            this.button_sair.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // button_relatorio
             // 
-            this.button6.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.Location = new System.Drawing.Point(23, 243);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(167, 42);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Vendas";
-            this.button6.UseVisualStyleBackColor = false;
+            this.button_relatorio.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_relatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_relatorio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_relatorio.Location = new System.Drawing.Point(23, 304);
+            this.button_relatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.button_relatorio.Name = "button_relatorio";
+            this.button_relatorio.Size = new System.Drawing.Size(167, 42);
+            this.button_relatorio.TabIndex = 20;
+            this.button_relatorio.Text = "Relatório";
+            this.button_relatorio.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button_vendas
             // 
-            this.button5.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.Location = new System.Drawing.Point(23, 182);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(167, 42);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Clientes";
-            this.button5.UseVisualStyleBackColor = false;
+            this.button_vendas.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_vendas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_vendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_vendas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_vendas.Location = new System.Drawing.Point(23, 243);
+            this.button_vendas.Margin = new System.Windows.Forms.Padding(2);
+            this.button_vendas.Name = "button_vendas";
+            this.button_vendas.Size = new System.Drawing.Size(167, 42);
+            this.button_vendas.TabIndex = 19;
+            this.button_vendas.Text = "Vendas";
+            this.button_vendas.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // button_cliente
             // 
-            this.button4.BackColor = System.Drawing.Color.SaddleBrown;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(23, 121);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(167, 42);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Fornecedores";
-            this.button4.UseVisualStyleBackColor = false;
+            this.button_cliente.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_cliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_cliente.Location = new System.Drawing.Point(23, 182);
+            this.button_cliente.Margin = new System.Windows.Forms.Padding(2);
+            this.button_cliente.Name = "button_cliente";
+            this.button_cliente.Size = new System.Drawing.Size(167, 42);
+            this.button_cliente.TabIndex = 18;
+            this.button_cliente.Text = "Clientes";
+            this.button_cliente.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // button_fornecedor
             // 
-            this.button9.BackColor = System.Drawing.Color.DarkGreen;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button9.Image = global::PIM3_SEMESTRE.Properties.Resources.icons8_notification_alert_both_on_phone_and_tablet_pc_24;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.Location = new System.Drawing.Point(23, 37);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(221, 42);
-            this.button9.TabIndex = 23;
-            this.button9.Text = "Notificações";
-            this.button9.UseVisualStyleBackColor = false;
+            this.button_fornecedor.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button_fornecedor.FlatAppearance.BorderSize = 0;
+            this.button_fornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_fornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_fornecedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button_fornecedor.Location = new System.Drawing.Point(23, 121);
+            this.button_fornecedor.Margin = new System.Windows.Forms.Padding(2);
+            this.button_fornecedor.Name = "button_fornecedor";
+            this.button_fornecedor.Size = new System.Drawing.Size(167, 42);
+            this.button_fornecedor.TabIndex = 17;
+            this.button_fornecedor.Text = "Fornecedores";
+            this.button_fornecedor.UseVisualStyleBackColor = false;
             // 
             // button11
             // 
@@ -280,13 +280,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tela_vendas_histórico";
             this.Text = "tela_vendas_histórico";
             this.Load += new System.EventHandler(this.tela_vendas_histórico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_historico_vendas)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -295,19 +295,19 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button_editar;
+        private System.Windows.Forms.Button button_adicionar;
+        private System.Windows.Forms.Button button_remover;
+        private System.Windows.Forms.DataGridView dataGridView_historico_vendas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_notificacao;
+        private System.Windows.Forms.Button button_producao;
+        private System.Windows.Forms.Button button_sair;
+        private System.Windows.Forms.Button button_relatorio;
+        private System.Windows.Forms.Button button_vendas;
+        private System.Windows.Forms.Button button_cliente;
+        private System.Windows.Forms.Button button_fornecedor;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label8;
     }
