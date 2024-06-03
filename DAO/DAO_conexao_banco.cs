@@ -14,7 +14,7 @@ namespace PIM3_SEMESTRE.DAO
         {
             public NpgsqlConnection Connection { get; set; } = null;
 
-            public DAOConnection (string host, string port, string database, string user, string pass)
+            public DAOConnection(string host, string port, string database, string user, string pass)
             {
                 Connect(host, port, database, user, pass);
             }
@@ -32,32 +32,29 @@ namespace PIM3_SEMESTRE.DAO
             }
 
             private void Connect(string host, string port, string database, string user, string pass)
-        {
-            if (Connection == null)
             {
-                Connection = new NpgsqlConnection(
-                $"Server={host};" +
-                $"Port={port};" +
-                $"Database={database};" +
-                $"Uid={user};" +
-                $"Pwd={pass};");
+                if (Connection == null)
+                {
+                    Connection = new NpgsqlConnection(
+                    $"Server={host};" +
+                    $"Port={port};" +
+                    $"Database={database};" +
+                    $"Uid={user};" +
+                    $"Pwd={pass};");
 
-                Connection.Open();
+                    Connection.Open();
+                }
             }
-        }
-
-        private void Disconnect()
-        {
-            if (Connection != null)
+            private void Disconnect()
             {
-                Connection.Close();
+                if (Connection != null)
+                {
+                    Connection.Close();
+                }
             }
+
         }
-
-
-
-
-
-
     }
+
 }
+
