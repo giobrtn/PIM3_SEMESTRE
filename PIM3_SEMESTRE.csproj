@@ -39,11 +39,19 @@
     <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+=======
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+>>>>>>> 77bfe945ccbc9fe9cb324742f85b9daf584318f1
     </Reference>
     <Reference Include="Npgsql, Version=8.0.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>packages\Npgsql.8.0.3\lib\netstandard2.0\Npgsql.dll</HintPath>
@@ -57,8 +65,13 @@
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+<<<<<<< HEAD
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+=======
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+>>>>>>> 77bfe945ccbc9fe9cb324742f85b9daf584318f1
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -73,8 +86,13 @@
     <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="System.Text.Json, Version=8.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.Json.8.0.3\lib\net462\System.Text.Json.dll</HintPath>
+=======
+    <Reference Include="System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.0\lib\net462\System.Text.Json.dll</HintPath>
+>>>>>>> 77bfe945ccbc9fe9cb324742f85b9daf584318f1
     </Reference>
     <Reference Include="System.Threading.Channels, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Channels.8.0.0\lib\net462\System.Threading.Channels.dll</HintPath>
@@ -96,102 +114,111 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="cliente\tela_cliente.cs">
+    <Compile Include="AcessoBD\AcessoBanco.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="Model\ClienteModel.cs" />
+    <Compile Include="Model\FornecedorModel.cs" />
+    <Compile Include="Model\OrdemProducaoModel.cs" />
+    <Compile Include="Model\PedidoVendaModel.cs" />
+    <Compile Include="Model\ProdutoModel.cs" />
+    <Compile Include="Model\TelefoneModel.cs" />
+    <Compile Include="Model\UsuarioModel.cs" />
+    <Compile Include="View\cliente\tela_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cliente\tela_cliente.Designer.cs">
+    <Compile Include="View\cliente\tela_cliente.Designer.cs">
       <DependentUpon>tela_cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="cliente\tela_cliente_adicionar.cs">
+    <Compile Include="View\cliente\tela_cliente_adicionar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="cliente\tela_cliente_adicionar.Designer.cs">
+    <Compile Include="View\cliente\tela_cliente_adicionar.Designer.cs">
       <DependentUpon>tela_cliente_adicionar.cs</DependentUpon>
     </Compile>
-    <Compile Include="fornecedor\tela_fornecedor_adicionar.cs">
+    <Compile Include="View\fornecedor\tela_fornecedor_adicionar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fornecedor\tela_fornecedor_adicionar.Designer.cs">
+    <Compile Include="View\fornecedor\tela_fornecedor_adicionar.Designer.cs">
       <DependentUpon>tela_fornecedor_adicionar.cs</DependentUpon>
     </Compile>
-    <Compile Include="fornecedor\tela_fornecedor.cs">
+    <Compile Include="View\fornecedor\tela_fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fornecedor\tela_fornecedor.Designer.cs">
+    <Compile Include="View\fornecedor\tela_fornecedor.Designer.cs">
       <DependentUpon>tela_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="login\tela_login.cs">
+    <Compile Include="View\login\tela_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login\tela_login.Designer.cs">
+    <Compile Include="View\login\tela_login.Designer.cs">
       <DependentUpon>tela_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="notificações\tela_notificações.cs">
+    <Compile Include="View\notificações\tela_notificações.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="notificações\tela_notificações.Designer.cs">
+    <Compile Include="View\notificações\tela_notificações.Designer.cs">
       <DependentUpon>tela_notificações.cs</DependentUpon>
     </Compile>
-    <Compile Include="produção\tela_producao.cs">
+    <Compile Include="View\produção\tela_producao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="produção\tela_producao.Designer.cs">
+    <Compile Include="View\produção\tela_producao.Designer.cs">
       <DependentUpon>tela_producao.cs</DependentUpon>
     </Compile>
-    <Compile Include="produção\tela_produção_adicionar.cs">
+    <Compile Include="View\produção\tela_produção_adicionar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="produção\tela_produção_adicionar.Designer.cs">
+    <Compile Include="View\produção\tela_produção_adicionar.Designer.cs">
       <DependentUpon>tela_produção_adicionar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="relatório\tela_relatório.cs">
+    <Compile Include="View\relatório\tela_relatório.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="relatório\tela_relatório.Designer.cs">
+    <Compile Include="View\relatório\tela_relatório.Designer.cs">
       <DependentUpon>tela_relatório.cs</DependentUpon>
     </Compile>
-    <Compile Include="relatório\tela_relatório_adicionar.cs">
+    <Compile Include="View\relatório\tela_relatório_adicionar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="relatório\tela_relatório_adicionar.Designer.cs">
+    <Compile Include="View\relatório\tela_relatório_adicionar.Designer.cs">
       <DependentUpon>tela_relatório_adicionar.cs</DependentUpon>
     </Compile>
-    <Compile Include="vendas\tela_venda.cs">
+    <Compile Include="View\vendas\tela_venda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vendas\tela_venda.Designer.cs">
+    <Compile Include="View\vendas\tela_venda.Designer.cs">
       <DependentUpon>tela_venda.cs</DependentUpon>
     </Compile>
-    <Compile Include="vendas\tela_vendas_histórico.cs">
+    <Compile Include="View\vendas\tela_vendas_histórico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="vendas\tela_vendas_histórico.Designer.cs">
+    <Compile Include="View\vendas\tela_vendas_histórico.Designer.cs">
       <DependentUpon>tela_vendas_histórico.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="cliente\tela_cliente.resx">
+    <EmbeddedResource Include="View\cliente\tela_cliente.resx">
       <DependentUpon>tela_cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="cliente\tela_cliente_adicionar.resx">
+    <EmbeddedResource Include="View\cliente\tela_cliente_adicionar.resx">
       <DependentUpon>tela_cliente_adicionar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fornecedor\tela_fornecedor.resx">
+    <EmbeddedResource Include="View\fornecedor\tela_fornecedor.resx">
       <DependentUpon>tela_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fornecedor\tela_fornecedor_adicionar.resx">
+    <EmbeddedResource Include="View\fornecedor\tela_fornecedor_adicionar.resx">
       <DependentUpon>tela_fornecedor_adicionar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login\tela_login.resx">
+    <EmbeddedResource Include="View\login\tela_login.resx">
       <DependentUpon>tela_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="notificações\tela_notificações.resx">
+    <EmbeddedResource Include="View\notificações\tela_notificações.resx">
       <DependentUpon>tela_notificações.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="produção\tela_producao.resx">
+    <EmbeddedResource Include="View\produção\tela_producao.resx">
       <DependentUpon>tela_producao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="produção\tela_produção_adicionar.resx">
+    <EmbeddedResource Include="View\produção\tela_produção_adicionar.resx">
       <DependentUpon>tela_produção_adicionar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -204,16 +231,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="relatório\tela_relatório.resx">
+    <EmbeddedResource Include="View\relatório\tela_relatório.resx">
       <DependentUpon>tela_relatório.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="relatório\tela_relatório_adicionar.resx">
+    <EmbeddedResource Include="View\relatório\tela_relatório_adicionar.resx">
       <DependentUpon>tela_relatório_adicionar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vendas\tela_venda.resx">
+    <EmbeddedResource Include="View\vendas\tela_venda.resx">
       <DependentUpon>tela_venda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vendas\tela_vendas_histórico.resx">
+    <EmbeddedResource Include="View\vendas\tela_vendas_histórico.resx">
       <DependentUpon>tela_vendas_histórico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -244,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icon-PIM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
