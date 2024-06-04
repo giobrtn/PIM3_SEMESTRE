@@ -85,6 +85,7 @@
             // 
             // button_entrar
             // 
+            this.button_entrar.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_entrar.FlatAppearance.BorderSize = 0;
             this.button_entrar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_entrar.Location = new System.Drawing.Point(133, 251);
@@ -94,6 +95,7 @@
             this.button_entrar.TabIndex = 15;
             this.button_entrar.Text = "Entrar";
             this.button_entrar.UseVisualStyleBackColor = true;
+            this.button_entrar.Click += new System.EventHandler(this.button_entrar_Click);
             // 
             // textBox_senha
             // 

@@ -1,7 +1,9 @@
-﻿using System;
+﻿using PIM3_SEMESTRE.notificações;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,11 +17,31 @@ namespace PIM3_SEMESTRE.login
         public tela_login()
         {
             InitializeComponent();
+            textBox_senha.UseSystemPasswordChar = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+        private void limparCampos() { textBox_login.Text = ""; textBox_senha.Text = "";}
+        private void button_entrar_Click(object sender, EventArgs e)
+        {
+            if (textBox_login.Text == "admin" && textBox_senha.Text == "admin")
+            {
+                
+                Console.WriteLine("Login com sucesso");
+                MessageBox.Show("Login efetuado com sucesso!");
+                this.Hide();
+                tela_notificações tela = new tela_notificações();
+                tela.Show();
+                tela.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Login ou senha incorretos!");
+                limparCampos();
+            }
         }
     }
 }
