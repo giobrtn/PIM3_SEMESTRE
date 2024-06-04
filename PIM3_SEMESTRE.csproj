@@ -96,6 +96,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcessoBD\AcessoBanco.cs" />
+    <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="Model\ClienteModel.cs" />
+    <Compile Include="Model\FornecedorModel.cs" />
+    <Compile Include="Model\OrdemProducaoModel.cs" />
+    <Compile Include="Model\PedidoVendaModel.cs" />
+    <Compile Include="Model\ProdutoModel.cs" />
+    <Compile Include="Model\TelefoneModel.cs" />
+    <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="View\cliente\tela_cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,7 +117,6 @@
     <Compile Include="View\cliente\tela_cliente_adicionar.Designer.cs">
       <DependentUpon>tela_cliente_adicionar.cs</DependentUpon>
     </Compile>
-    <Compile Include="DAO\DAO_conexao_banco.cs" />
     <Compile Include="View\fornecedor\tela_fornecedor_adicionar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,7 +256,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
-    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

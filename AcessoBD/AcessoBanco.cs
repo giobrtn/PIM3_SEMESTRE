@@ -8,27 +8,15 @@ using System.Threading.Tasks;
 
 namespace PIM3_SEMESTRE.DAO
 {
-    internal class DAO_conexao_banco
+    internal class conexao_banco
     {
-        internal class DAOConnection
+        internal class ConnectionBD
         {
             public NpgsqlConnection Connection { get; set; } = null;
 
-            public DAOConnection(string host, string port, string database, string user, string pass)
+            public ConnectionBD(string host, string port, string database, string user, string pass)
             {
                 Connect(host, port, database, user, pass);
-            }
-
-            public void Insert(Actor actor)
-            {
-                string query = "INSERT INTO actor (first_name, last_name) VALUES (@first_name, @last_name)";
-
-                NpgsqlCommand c2 = new NpgsqlCommand(query, Connection);
-
-                c2.Parameters.AddWithValue("first_name", actor.FirstName);
-                c2.Parameters.AddWithValue("last_name", actor.LastName);
-
-                c2.ExecuteNonQuery();
             }
 
             private void Connect(string host, string port, string database, string user, string pass)
@@ -57,4 +45,5 @@ namespace PIM3_SEMESTRE.DAO
     }
 
 }
+
 
