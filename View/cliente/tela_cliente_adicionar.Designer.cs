@@ -99,7 +99,7 @@
             // textBox_cidade
             // 
             this.textBox_cidade.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_cidade.Location = new System.Drawing.Point(409, 239);
+            this.textBox_cidade.Location = new System.Drawing.Point(400, 239);
             this.textBox_cidade.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_cidade.Name = "textBox_cidade";
             this.textBox_cidade.Size = new System.Drawing.Size(124, 23);
@@ -109,7 +109,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(407, 213);
+            this.label7.Location = new System.Drawing.Point(397, 213);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 15);
@@ -140,7 +140,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(295, 213);
+            this.label5.Location = new System.Drawing.Point(296, 213);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 15);

@@ -21,5 +21,10 @@ namespace PIM3_SEMESTRE.login
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
