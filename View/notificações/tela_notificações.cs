@@ -16,5 +16,10 @@ namespace PIM3_SEMESTRE.notificações
         {
             InitializeComponent();
         }
+
+        private void button_fornecedor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

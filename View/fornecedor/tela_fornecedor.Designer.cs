@@ -110,6 +110,7 @@
             this.dataGridView_fornecedor.RowTemplate.Height = 28;
             this.dataGridView_fornecedor.Size = new System.Drawing.Size(621, 318);
             this.dataGridView_fornecedor.TabIndex = 16;
+            this.dataGridView_fornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_fornecedor_CellContentClick);
             // 
             // label1
             // 
@@ -252,6 +253,7 @@
             this.button_fornecedor.TabIndex = 17;
             this.button_fornecedor.Text = "Fornecedores";
             this.button_fornecedor.UseVisualStyleBackColor = false;
+            this.button_fornecedor.Click += new System.EventHandler(this.button_fornecedor_Click);
             // 
             // button11
             // 
