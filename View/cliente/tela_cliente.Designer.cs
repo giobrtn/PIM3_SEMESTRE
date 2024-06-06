@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_editar = new System.Windows.Forms.Button();
             this.button_adicionar = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             this.button_adicionar.TabIndex = 18;
             this.button_adicionar.Text = "Adicionar";
             this.button_adicionar.UseVisualStyleBackColor = true;
+            this.button_adicionar.Click += new System.EventHandler(this.button_adicionar_Click);
             // 
             // button_remover
             // 
@@ -102,6 +104,14 @@
             // dataGridView_clientes
             // 
             this.dataGridView_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_clientes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_clientes.Location = new System.Drawing.Point(47, 83);
             this.dataGridView_clientes.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_clientes.Name = "dataGridView_clientes";
@@ -166,6 +176,7 @@
             this.button_notificacao.TabIndex = 23;
             this.button_notificacao.Text = "Notificações";
             this.button_notificacao.UseVisualStyleBackColor = false;
+            this.button_notificacao.Click += new System.EventHandler(this.button_notificacao_Click);
             // 
             // button_producao
             // 
@@ -180,6 +191,7 @@
             this.button_producao.TabIndex = 22;
             this.button_producao.Text = "Produção";
             this.button_producao.UseVisualStyleBackColor = false;
+            this.button_producao.Click += new System.EventHandler(this.button_producao_Click);
             // 
             // button_sair
             // 
@@ -194,6 +206,7 @@
             this.button_sair.TabIndex = 21;
             this.button_sair.Text = "Sair";
             this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_relatorio
             // 
@@ -208,6 +221,7 @@
             this.button_relatorio.TabIndex = 20;
             this.button_relatorio.Text = "Relatório";
             this.button_relatorio.UseVisualStyleBackColor = false;
+            this.button_relatorio.Click += new System.EventHandler(this.button_relatorio_Click);
             // 
             // button_vendas
             // 
@@ -222,6 +236,7 @@
             this.button_vendas.TabIndex = 19;
             this.button_vendas.Text = "Vendas";
             this.button_vendas.UseVisualStyleBackColor = false;
+            this.button_vendas.Click += new System.EventHandler(this.button_vendas_Click);
             // 
             // button_cliente
             // 
@@ -251,6 +266,7 @@
             this.button_fornecedor.TabIndex = 17;
             this.button_fornecedor.Text = "Fornecedores";
             this.button_fornecedor.UseVisualStyleBackColor = false;
+            this.button_fornecedor.Click += new System.EventHandler(this.button_fornecedor_Click);
             // 
             // button11
             // 

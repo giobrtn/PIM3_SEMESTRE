@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_notificacao = new System.Windows.Forms.Button();
             this.button_producao = new System.Windows.Forms.Button();
@@ -94,6 +97,7 @@
             this.button_producao.TabIndex = 22;
             this.button_producao.Text = "Produção";
             this.button_producao.UseVisualStyleBackColor = false;
+            this.button_producao.Click += new System.EventHandler(this.button_producao_Click);
             // 
             // button_sair
             // 
@@ -108,6 +112,7 @@
             this.button_sair.TabIndex = 21;
             this.button_sair.Text = "Sair";
             this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_relatorio
             // 
@@ -122,6 +127,7 @@
             this.button_relatorio.TabIndex = 20;
             this.button_relatorio.Text = "Relatório";
             this.button_relatorio.UseVisualStyleBackColor = false;
+            this.button_relatorio.Click += new System.EventHandler(this.button_relatorio_Click);
             // 
             // button_vendas
             // 
@@ -136,6 +142,7 @@
             this.button_vendas.TabIndex = 19;
             this.button_vendas.Text = "Vendas";
             this.button_vendas.UseVisualStyleBackColor = false;
+            this.button_vendas.Click += new System.EventHandler(this.button_vendas_Click);
             // 
             // button_cliente
             // 
@@ -150,6 +157,7 @@
             this.button_cliente.TabIndex = 18;
             this.button_cliente.Text = "Clientes";
             this.button_cliente.UseVisualStyleBackColor = false;
+            this.button_cliente.Click += new System.EventHandler(this.button_cliente_Click);
             // 
             // button_fornecedor
             // 
@@ -204,11 +212,32 @@
             // 
             // dataGridView_notificacao
             // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_notificacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_notificacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_notificacao.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView_notificacao.EnableHeadersVisualStyles = false;
+            this.dataGridView_notificacao.GridColor = System.Drawing.Color.Black;
             this.dataGridView_notificacao.Location = new System.Drawing.Point(44, 80);
             this.dataGridView_notificacao.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_notificacao.Name = "dataGridView_notificacao";
             this.dataGridView_notificacao.RowHeadersWidth = 62;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Sienna;
+            this.dataGridView_notificacao.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView_notificacao.RowTemplate.Height = 28;
             this.dataGridView_notificacao.Size = new System.Drawing.Size(621, 318);
             this.dataGridView_notificacao.TabIndex = 16;
