@@ -80,6 +80,7 @@
             this.button_notificacao.TabIndex = 23;
             this.button_notificacao.Text = "Notificações";
             this.button_notificacao.UseVisualStyleBackColor = false;
+            this.button_notificacao.Click += new System.EventHandler(this.button_notificacao_Click);
             // 
             // button_producao
             // 

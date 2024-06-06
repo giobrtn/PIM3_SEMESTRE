@@ -122,6 +122,7 @@
             this.button_relatorio.TabIndex = 20;
             this.button_relatorio.Text = "Relatório";
             this.button_relatorio.UseVisualStyleBackColor = false;
+            this.button_relatorio.Click += new System.EventHandler(this.button_relatorio_Click);
             // 
             // button_vendas
             // 
@@ -150,6 +151,7 @@
             this.button_cliente.TabIndex = 18;
             this.button_cliente.Text = "Clientes";
             this.button_cliente.UseVisualStyleBackColor = false;
+            this.button_cliente.Click += new System.EventHandler(this.button_cliente_Click);
             // 
             // button_fornecedor
             // 

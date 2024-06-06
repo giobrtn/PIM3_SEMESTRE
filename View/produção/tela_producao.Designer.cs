@@ -180,6 +180,7 @@
             this.button_producao.TabIndex = 22;
             this.button_producao.Text = "Produção";
             this.button_producao.UseVisualStyleBackColor = false;
+            this.button_producao.Click += new System.EventHandler(this.button_producao_Click);
             // 
             // button_sair
             // 

@@ -1,4 +1,8 @@
-﻿using System;
+﻿using PIM3_SEMESTRE.cliente;
+using PIM3_SEMESTRE.fornecedor;
+using PIM3_SEMESTRE.notificações;
+using PIM3_SEMESTRE.produção;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +20,9 @@ namespace PIM3_SEMESTRE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Application.Run(new tela_notificações());
+
         }
     }
 }

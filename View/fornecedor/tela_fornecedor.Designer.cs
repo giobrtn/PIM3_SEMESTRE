@@ -286,6 +286,7 @@
             this.Name = "tela_fornecedor1cs";
             this.Text = "tela_fornecedor1cs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.tela_fornecedor1cs_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fornecedor)).EndInit();

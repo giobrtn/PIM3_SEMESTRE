@@ -236,6 +236,7 @@
             this.button_cliente.TabIndex = 18;
             this.button_cliente.Text = "Clientes";
             this.button_cliente.UseVisualStyleBackColor = false;
+            this.button_cliente.Click += new System.EventHandler(this.button_cliente_Click);
             // 
             // button_fornecedor
             // 
@@ -282,6 +283,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "tela_cliente";
             this.Text = "tela_cliente";
+            this.Load += new System.EventHandler(this.tela_cliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_clientes)).EndInit();

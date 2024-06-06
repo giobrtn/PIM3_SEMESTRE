@@ -10,25 +10,25 @@ namespace PIM3_SEMESTRE.Model
     {
         public int IdFornecedor { get; set; }
         public string NomeFornecedor { get; set; }
-        public string Cnpj { get; set; }
-        public string EmailFornecedor { get; set; }
+        public string Cnpj { get; set; } 
         public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Cidade { get; set; }
         public string Endereco { get; set; }
         public int Status { get; set; }
-
-        public FornecedorModel (string nomeFornecedor, string cnpj, string emailFornecedor, string logradouro, string numero, string cidade, string endereco, int status)
+        public string Telefone { get; set; }
+        public FornecedorModel (string nomeFornecedor, string cnpj, string logradouro, string numero, string cidade, string endereco, int status, string telefone)
 
         {
             NomeFornecedor = nomeFornecedor;
             Cnpj = cnpj;
-            EmailFornecedor= emailFornecedor;
             Logradouro = logradouro;
             Numero = numero;
             Cidade = cidade;
             Endereco = endereco;
             Status = status;
+            Telefone = telefone;
+
 
         }
 

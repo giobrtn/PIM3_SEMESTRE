@@ -103,6 +103,7 @@
             this.button_historico.TabIndex = 17;
             this.button_historico.Text = "Histórico";
             this.button_historico.UseVisualStyleBackColor = true;
+            this.button_historico.Click += new System.EventHandler(this.button_historico_Click);
             // 
             // textBox_quantidade
             // 

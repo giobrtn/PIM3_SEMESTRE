@@ -37,11 +37,9 @@ namespace PIM3_SEMESTRE.fornecedor
         private void button_fornecedor_Click(object sender, EventArgs e)
         {
 
-            Connection.Open();
+            conn.Open();
 
-            Visible = false;
-
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM produto", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -52,13 +50,18 @@ namespace PIM3_SEMESTRE.fornecedor
                 dataGridView_fornecedor.DataSource = dt;
             }
 
-            Connection.Close();
+            conn.Close();
 
 
 
         }
 
         private void dataGridView_fornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tela_fornecedor1cs_Load(object sender, EventArgs e)
         {
 
         }
