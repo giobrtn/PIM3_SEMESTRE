@@ -30,7 +30,6 @@ namespace PIM3_SEMESTRE.login
             if (textBox_login.Text == "admin" && textBox_senha.Text == "admin")
             {
                 
-                Console.WriteLine("Login com sucesso");
                 MessageBox.Show("Login efetuado com sucesso!");
                 this.Hide();
                 tela_notificações tela = new tela_notificações();
