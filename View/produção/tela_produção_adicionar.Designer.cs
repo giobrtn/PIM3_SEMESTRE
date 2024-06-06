@@ -58,6 +58,10 @@
             this.button_cliente = new System.Windows.Forms.Button();
             this.button_fornecedor = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.textBox_preco_inicial = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox_preco_final = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +82,10 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox_preco_final);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.textBox_preco_inicial);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.textBox_data);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.textBox_fornecedor);
@@ -434,6 +442,46 @@
             this.button11.TabIndex = 31;
             this.button11.UseVisualStyleBackColor = false;
             // 
+            // textBox_preco_inicial
+            // 
+            this.textBox_preco_inicial.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_preco_inicial.Location = new System.Drawing.Point(394, 318);
+            this.textBox_preco_inicial.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_preco_inicial.Name = "textBox_preco_inicial";
+            this.textBox_preco_inicial.Size = new System.Drawing.Size(76, 23);
+            this.textBox_preco_inicial.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(391, 291);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Preço inicial";
+            // 
+            // textBox_preco_final
+            // 
+            this.textBox_preco_final.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_preco_final.Location = new System.Drawing.Point(489, 318);
+            this.textBox_preco_final.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_preco_final.Name = "textBox_preco_final";
+            this.textBox_preco_final.Size = new System.Drawing.Size(76, 23);
+            this.textBox_preco_final.TabIndex = 22;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(486, 291);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 15);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Preço final";
+            // 
             // tela_produção_adicionar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,5 +534,9 @@
         private System.Windows.Forms.Button button_cliente;
         private System.Windows.Forms.Button button_fornecedor;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox_preco_final;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox_preco_inicial;
+        private System.Windows.Forms.Label label11;
     }
 }

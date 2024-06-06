@@ -97,13 +97,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AcessoBD\AcessoBanco.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\FornecedorDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="DAO\OrdemProducaoDAO.cs" />
+    <Compile Include="DAO\PedidoVendaDAO.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="Model\ClienteModel.cs" />
     <Compile Include="Model\FornecedorModel.cs" />
     <Compile Include="Model\OrdemProducaoModel.cs" />
     <Compile Include="Model\PedidoVendaModel.cs" />
     <Compile Include="Model\ProdutoModel.cs" />
-    <Compile Include="Model\TelefoneModel.cs" />
     <Compile Include="Model\UsuarioModel.cs" />
     <Compile Include="View\cliente\tela_cliente.cs">
       <SubType>Form</SubType>

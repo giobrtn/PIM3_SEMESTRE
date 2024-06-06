@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_notificacao = new System.Windows.Forms.Button();
             this.button_producao = new System.Windows.Forms.Button();
@@ -80,6 +83,7 @@
             this.button_notificacao.TabIndex = 23;
             this.button_notificacao.Text = "Notificações";
             this.button_notificacao.UseVisualStyleBackColor = false;
+            this.button_notificacao.Click += new System.EventHandler(this.button_notificacao_Click);
             // 
             // button_producao
             // 
@@ -165,6 +169,7 @@
             this.button_fornecedor.TabIndex = 17;
             this.button_fornecedor.Text = "Fornecedores";
             this.button_fornecedor.UseVisualStyleBackColor = false;
+            this.button_fornecedor.Click += new System.EventHandler(this.button_fornecedor_Click);
             // 
             // label10
             // 
@@ -204,11 +209,32 @@
             // 
             // dataGridView_notificacao
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_notificacao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_notificacao.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_notificacao.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_notificacao.EnableHeadersVisualStyles = false;
+            this.dataGridView_notificacao.GridColor = System.Drawing.Color.Black;
             this.dataGridView_notificacao.Location = new System.Drawing.Point(44, 80);
             this.dataGridView_notificacao.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView_notificacao.Name = "dataGridView_notificacao";
             this.dataGridView_notificacao.RowHeadersWidth = 62;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SaddleBrown;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Sienna;
+            this.dataGridView_notificacao.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_notificacao.RowTemplate.Height = 28;
             this.dataGridView_notificacao.Size = new System.Drawing.Size(621, 318);
             this.dataGridView_notificacao.TabIndex = 16;

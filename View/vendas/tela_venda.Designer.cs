@@ -58,6 +58,8 @@
             this.button_fornecedor = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button11 = new System.Windows.Forms.Button();
+            this.textBox_total_venda = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +68,8 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox_total_venda);
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button_historico);
             this.panel1.Controls.Add(this.textBox_quantidade);
             this.panel1.Controls.Add(this.label5);
@@ -99,6 +103,7 @@
             this.button_historico.TabIndex = 17;
             this.button_historico.Text = "Histórico";
             this.button_historico.UseVisualStyleBackColor = true;
+            this.button_historico.Click += new System.EventHandler(this.button_historico_Click);
             // 
             // textBox_quantidade
             // 
@@ -409,6 +414,26 @@
             this.button11.TabIndex = 24;
             this.button11.UseVisualStyleBackColor = false;
             // 
+            // textBox_total_venda
+            // 
+            this.textBox_total_venda.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_total_venda.Location = new System.Drawing.Point(454, 376);
+            this.textBox_total_venda.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_total_venda.Name = "textBox_total_venda";
+            this.textBox_total_venda.Size = new System.Drawing.Size(160, 23);
+            this.textBox_total_venda.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(451, 350);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 15);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Total Venda";
+            // 
             // tela_venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,5 +485,7 @@
         private System.Windows.Forms.Button button_fornecedor;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.TextBox textBox_total_venda;
+        private System.Windows.Forms.Label label9;
     }
 }
