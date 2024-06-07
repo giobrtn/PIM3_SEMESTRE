@@ -389,6 +389,7 @@
             this.button_notificacao.TabIndex = 23;
             this.button_notificacao.Text = "Notificações";
             this.button_notificacao.UseVisualStyleBackColor = false;
+            this.button_notificacao.Click += new System.EventHandler(this.button_notificacao_Click);
             // 
             // button_producao
             // 
@@ -403,6 +404,7 @@
             this.button_producao.TabIndex = 22;
             this.button_producao.Text = "Produção";
             this.button_producao.UseVisualStyleBackColor = false;
+            this.button_producao.Click += new System.EventHandler(this.button_producao_Click);
             // 
             // button_sair
             // 
@@ -417,6 +419,7 @@
             this.button_sair.TabIndex = 21;
             this.button_sair.Text = "Sair";
             this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_relatorio
             // 
@@ -431,6 +434,7 @@
             this.button_relatorio.TabIndex = 20;
             this.button_relatorio.Text = "Relatório";
             this.button_relatorio.UseVisualStyleBackColor = false;
+            this.button_relatorio.Click += new System.EventHandler(this.button_relatorio_Click);
             // 
             // button_vendas
             // 
@@ -445,6 +449,7 @@
             this.button_vendas.TabIndex = 19;
             this.button_vendas.Text = "Vendas";
             this.button_vendas.UseVisualStyleBackColor = false;
+            this.button_vendas.Click += new System.EventHandler(this.button_vendas_Click);
             // 
             // button_cliente
             // 
@@ -459,6 +464,7 @@
             this.button_cliente.TabIndex = 18;
             this.button_cliente.Text = "Clientes";
             this.button_cliente.UseVisualStyleBackColor = false;
+            this.button_cliente.Click += new System.EventHandler(this.button_cliente_Click);
             // 
             // button_fornecedor
             // 
@@ -474,6 +480,7 @@
             this.button_fornecedor.TabIndex = 17;
             this.button_fornecedor.Text = "Fornecedores";
             this.button_fornecedor.UseVisualStyleBackColor = false;
+            this.button_fornecedor.Click += new System.EventHandler(this.button_fornecedor_Click);
             // 
             // button11
             // 

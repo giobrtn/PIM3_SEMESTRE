@@ -13,6 +13,14 @@ namespace PIM3_SEMESTRE.produção
 {
     public partial class tela_produção_adicionar : Form
     {
+        public event EventHandler ClienteButtonClicked;
+        public event EventHandler NotificacaoButtonClicked;
+        public event EventHandler FornecedorButtonClicked;
+        public event EventHandler VendasButtonClicked;
+        public event EventHandler RelatorioButtonClicked;
+        public event EventHandler ProducaoButtonClicked;
+        public event EventHandler SairButtonClicked;
+        public event EventHandler AddProducaoButtonClicked;
         public NpgsqlConnection Connection { get; set; } = null;
 
         NpgsqlConnection conn = new NpgsqlConnection(
@@ -27,6 +35,7 @@ namespace PIM3_SEMESTRE.produção
             InitializeComponent();
         }
 
+        /*
         private void textBox_nome_TextChanged(object sender, EventArgs e)
         {
             conn.Open();
@@ -135,6 +144,115 @@ namespace PIM3_SEMESTRE.produção
             NpgsqlDataReader dr = c1.ExecuteReader();
 
             conn.Close();
+        } */
+        private void button_adicionar_Click(object sender, EventArgs e)
+        {
+            string nome = textBox_nome.Text;
+            string categoria = textBox_categoria.Text;
+            string tipo = textBox_tipo.Text;
+            string estacaoPreferencial = textBox4_estacao_preferencial.Text;
+            string data = textBox_data.Text;
+            string usuario = textBox_usuario.Text;
+            string fornecedor = textBox_fornecedor.Text;
+            string quantidade = textBox_quantidade.Text;
+            string precoInicial = textBox_preco_inicial.Text;
+            string precoFinal = textBox_preco_final.Text;
+
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO produto (nome, categoria, tipo, estacaopreferencial, data, usuario, fornecedor, quantidade, precoinicial, precofinal) " +
+                               "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("nome", nome);
+                cmd.Parameters.AddWithValue("categoria", categoria);
+                cmd.Parameters.AddWithValue("tipo", tipo);
+                cmd.Parameters.AddWithValue("estacaoPreferencial", estacaoPreferencial);
+                cmd.Parameters.AddWithValue("data", data);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+                cmd.Parameters.AddWithValue("fornecedor", fornecedor);
+                cmd.Parameters.AddWithValue("quantidade", quantidade);
+                cmd.Parameters.AddWithValue("precoInicial", precoInicial);
+                cmd.Parameters.AddWithValue("precoFinal", precoFinal);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Produto adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar produto: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void button_notificacao_Click(object sender, EventArgs e)
+        {
+            OnNotificacaoButtonClicked(EventArgs.Empty);
+        }
+        private void button_fornecedor_Click(object sender, EventArgs e)
+        {
+            OnFornecedorButtonClicked(EventArgs.Empty);
+        }
+        private void button_cliente_Click(object sender, EventArgs e)
+        {
+            OnClienteButtonClicked(EventArgs.Empty);
+        }
+
+        private void button_vendas_Click(object sender, EventArgs e)
+        {
+            OnVendasButtonClicked(EventArgs.Empty);
+        }
+
+        private void button_relatorio_Click(object sender, EventArgs e)
+        {
+            OnRelatorioButtonClicked(EventArgs.Empty);
+        }
+
+        private void button_producao_Click(object sender, EventArgs e)
+        {
+            OnProducaoButtonClicked(EventArgs.Empty);
+        }
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            OnSairButtonClicked(EventArgs.Empty);
+        }
+
+
+
+        protected virtual void OnNotificacaoButtonClicked(EventArgs e)
+        {
+            NotificacaoButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnFornecedorButtonClicked(EventArgs e)
+        {
+            FornecedorButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnClienteButtonClicked(EventArgs e)
+        {
+            ClienteButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnVendasButtonClicked(EventArgs e)
+        {
+            VendasButtonClicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnRelatorioButtonClicked(EventArgs e)
+        {
+            RelatorioButtonClicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnProducaoButtonClicked(EventArgs e)
+        {
+            ProducaoButtonClicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnSairButtonClicked(EventArgs e)
+        {
+            SairButtonClicked?.Invoke(this, e);
         }
     }
 }

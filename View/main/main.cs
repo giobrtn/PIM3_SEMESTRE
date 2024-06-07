@@ -129,6 +129,7 @@ namespace PIM3_SEMESTRE.View.main
             producaoForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
             producaoForm.SairButtonClicked += OnSairButtonClicked;
             producaoForm.ClienteButtonClicked += OnClienteButtonClicked;
+            producaoForm.AddProducaoButtonClicked += OnAddProducaoButtonClicked;
             ShowFormInPanel(producaoForm);
         }
 
@@ -149,8 +150,20 @@ namespace PIM3_SEMESTRE.View.main
         {
             Application.Exit();
         }
-       
 
+        private void OnAddProducaoButtonClicked(object sender, EventArgs e)
+        {
+            tela_produção_adicionar addProducaoForm = new tela_produção_adicionar();
+            addProducaoForm.FornecedorButtonClicked += OnFornecedorButtonClicked;
+            addProducaoForm.NotificacaoButtonClicked += OnNotificacaoButtonClicked;
+            addProducaoForm.VendasButtonClicked += OnVendasButtonClicked;
+            addProducaoForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
+            addProducaoForm.ProducaoButtonClicked += OnProducaoButtonClicked;
+            addProducaoForm.SairButtonClicked += OnSairButtonClicked;
+            addProducaoForm.ClienteButtonClicked += OnClienteButtonClicked;
+
+            ShowFormInPanel(addProducaoForm);
+        }
         private void ShowFormInPanel(Form form)
         {
             if (currentForm != null)

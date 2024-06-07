@@ -20,7 +20,7 @@ namespace PIM3_SEMESTRE.produção
         public event EventHandler RelatorioButtonClicked;
         public event EventHandler ProducaoButtonClicked;
         public event EventHandler SairButtonClicked;
-        public event EventHandler AddClientButtonClicked;
+        public event EventHandler AddProducaoButtonClicked;
         public NpgsqlConnection Connection { get; set; } = null;
 
         NpgsqlConnection conn = new NpgsqlConnection(
@@ -88,7 +88,10 @@ namespace PIM3_SEMESTRE.produção
             OnSairButtonClicked(EventArgs.Empty);
         }
 
-
+        private void button_adicionar_Click(object sender, EventArgs e)
+        {
+            OnAddProducaoButtonClicked(EventArgs.Empty);
+        }
 
         protected virtual void OnNotificacaoButtonClicked(EventArgs e)
         {
@@ -112,7 +115,10 @@ namespace PIM3_SEMESTRE.produção
             RelatorioButtonClicked?.Invoke(this, e);
         }
 
-       
+       protected virtual void OnAddProducaoButtonClicked(EventArgs e)
+        {
+            AddProducaoButtonClicked?.Invoke(this, e);
+        }
 
         protected virtual void OnSairButtonClicked(EventArgs e)
         {
