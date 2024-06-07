@@ -19,7 +19,7 @@ namespace PIM3_SEMESTRE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new tela_login());
+            Application.Run(new Form1());
         }
     }
 }
