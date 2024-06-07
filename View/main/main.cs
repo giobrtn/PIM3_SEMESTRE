@@ -91,6 +91,7 @@ namespace PIM3_SEMESTRE.View.main
             addFornecedorForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
             addFornecedorForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             addFornecedorForm.SairButtonClicked += OnSairButtonClicked;
+            addFornecedorForm.ClientButtonClicked += OnClienteButtonClicked;
             ShowFormInPanel(addFornecedorForm);
         }
         private void OnVendasButtonClicked(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace PIM3_SEMESTRE.View.main
             addClienteForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
             addClienteForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             addClienteForm.SairButtonClicked += OnSairButtonClicked;
+            addClienteForm.ClientButtonClicked += OnClienteButtonClicked;
             
             ShowFormInPanel(addClienteForm);
         }
