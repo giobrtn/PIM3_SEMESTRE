@@ -20,7 +20,6 @@ namespace PIM3_SEMESTRE.View.main
     public partial class Form1 : Form
     {
         private Form currentForm;
-        private Stack<Form> formHistory = new Stack<Form>();
         public Form1()
         {
             InitializeComponent();
@@ -91,7 +90,6 @@ namespace PIM3_SEMESTRE.View.main
             addFornecedorForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
             addFornecedorForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             addFornecedorForm.SairButtonClicked += OnSairButtonClicked;
-            addFornecedorForm.CancelButtonClicked += OnCancelButtonClicked;
             ShowFormInPanel(addFornecedorForm);
         }
         private void OnVendasButtonClicked(object sender, EventArgs e)
@@ -121,17 +119,14 @@ namespace PIM3_SEMESTRE.View.main
             addClienteForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
             addClienteForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             addClienteForm.SairButtonClicked += OnSairButtonClicked;
-            addClienteForm.CancelButtonClicked += OnCancelButtonClicked;
+            
             ShowFormInPanel(addClienteForm);
         }
         private void OnSairButtonClicked(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private void OnCancelButtonClicked(object sender, EventArgs e)
-        {
-            ShowPreviousForm();
-        }
+       
 
         private void ShowFormInPanel(Form form)
         {
@@ -150,13 +145,6 @@ namespace PIM3_SEMESTRE.View.main
             currentForm.Show();
         }
 
-        private void ShowPreviousForm()
-        {
-            if (formHistory.Count > 0)
-            {
-                Form previousForm = formHistory.Pop(); // Recupera o último formulário do histórico
-                ShowFormInPanel(previousForm);
-            }
-        }
+      
     }
 }
