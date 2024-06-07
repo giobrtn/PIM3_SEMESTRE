@@ -78,6 +78,7 @@ namespace PIM3_SEMESTRE.View.main
             fornecedorForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
             fornecedorForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             fornecedorForm.SairButtonClicked += OnSairButtonClicked;
+            fornecedorForm.ClienteButtonClicked += OnClienteButtonClicked;
             
             ShowFormInPanel(fornecedorForm);
         }
