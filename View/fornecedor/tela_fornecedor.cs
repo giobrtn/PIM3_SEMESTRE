@@ -53,7 +53,7 @@ namespace PIM3_SEMESTRE.fornecedor
             if (dr.HasRows)
             {
                 DataTable dt = new DataTable();
-                dt.Load (dr);
+                dt.Load(dr);
                 dataGridView_fornecedor.DataSource = dt;
             }
 

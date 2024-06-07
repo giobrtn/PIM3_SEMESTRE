@@ -51,5 +51,71 @@ namespace PIM3_SEMESTRE.vendas
             conn.Close();
 
         }
+
+        private void textBox_cliente_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_data_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_pagamento_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_produto_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_quantidade_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_usuario_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
     }
 }

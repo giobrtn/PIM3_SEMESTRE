@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_notificacao = new System.Windows.Forms.Button();
             this.button_producao = new System.Windows.Forms.Button();
@@ -39,9 +43,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_imprimir = new System.Windows.Forms.Button();
-            this.dataGridView_relatorio = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
+            this.dataGridView_relatorio = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_relatorio)).BeginInit();
@@ -183,8 +187,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.panel1.Controls.Add(this.button_imprimir);
             this.panel1.Controls.Add(this.dataGridView_relatorio);
+            this.panel1.Controls.Add(this.button_imprimir);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(354, 110);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -203,17 +207,6 @@
             this.button_imprimir.TabIndex = 18;
             this.button_imprimir.Text = "Imprimir";
             this.button_imprimir.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView_relatorio
-            // 
-            this.dataGridView_relatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_relatorio.Location = new System.Drawing.Point(44, 80);
-            this.dataGridView_relatorio.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_relatorio.Name = "dataGridView_relatorio";
-            this.dataGridView_relatorio.RowHeadersWidth = 62;
-            this.dataGridView_relatorio.RowTemplate.Height = 28;
-            this.dataGridView_relatorio.Size = new System.Drawing.Size(621, 318);
-            this.dataGridView_relatorio.TabIndex = 16;
             // 
             // label1
             // 
@@ -242,6 +235,50 @@
             this.button11.Size = new System.Drawing.Size(60, 48);
             this.button11.TabIndex = 30;
             this.button11.UseVisualStyleBackColor = false;
+            // 
+            // dataGridView_relatorio
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_relatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_relatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_relatorio.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_relatorio.EnableHeadersVisualStyles = false;
+            this.dataGridView_relatorio.GridColor = System.Drawing.Color.Black;
+            this.dataGridView_relatorio.Location = new System.Drawing.Point(45, 89);
+            this.dataGridView_relatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_relatorio.Name = "dataGridView_relatorio";
+            this.dataGridView_relatorio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_relatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_relatorio.RowHeadersVisible = false;
+            this.dataGridView_relatorio.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            this.dataGridView_relatorio.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_relatorio.RowTemplate.Height = 28;
+            this.dataGridView_relatorio.Size = new System.Drawing.Size(621, 318);
+            this.dataGridView_relatorio.TabIndex = 19;
             // 
             // tela_relatório
             // 
@@ -277,8 +314,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button_imprimir;
-        private System.Windows.Forms.DataGridView dataGridView_relatorio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.DataGridView dataGridView_relatorio;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,15 @@ namespace PIM3_SEMESTRE.cliente
         public event EventHandler AddClientButtonClicked;
         public event EventHandler ClientButtonClicked;
         public event EventHandler CancelButtonClicked;
+
+        public NpgsqlConnection Connection { get; set; } = null;
+
+        NpgsqlConnection conn = new NpgsqlConnection(
+                "Server=localhost;" +
+                "Port=5432;" +
+                "Database=sistema;" +
+                "Uid=postgres;" +
+                "Pwd=dbadmin;");
         public tela_cliente_adicionar()
         {
             InitializeComponent();
@@ -105,6 +115,79 @@ namespace PIM3_SEMESTRE.cliente
         protected virtual void OnSairButtonClicked(EventArgs e)
         {
             SairButtonClicked?.Invoke(this, e);
+        }
+
+        private void textBox_nome_empresa_TextChanged(object sender, EventArgs e)
+        {
+
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+
+        }
+
+        private void textBox_cnpj_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_telefone_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_logradouro_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_numero_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_cidade_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void button_adicionar_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

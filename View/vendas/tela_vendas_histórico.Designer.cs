@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button_editar = new System.Windows.Forms.Button();
             this.button_adicionar = new System.Windows.Forms.Button();
             this.button_remover = new System.Windows.Forms.Button();
-            this.dataGridView_historico_vendas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_notificacao = new System.Windows.Forms.Button();
@@ -44,19 +47,20 @@
             this.button_fornecedor = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.dataGridView_venda = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_historico_vendas)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_venda)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.dataGridView_venda);
             this.panel1.Controls.Add(this.button_editar);
             this.panel1.Controls.Add(this.button_adicionar);
             this.panel1.Controls.Add(this.button_remover);
-            this.panel1.Controls.Add(this.dataGridView_historico_vendas);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(359, 110);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
@@ -99,17 +103,6 @@
             this.button_remover.TabIndex = 22;
             this.button_remover.Text = "Remover";
             this.button_remover.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView_historico_vendas
-            // 
-            this.dataGridView_historico_vendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_historico_vendas.Location = new System.Drawing.Point(44, 75);
-            this.dataGridView_historico_vendas.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView_historico_vendas.Name = "dataGridView_historico_vendas";
-            this.dataGridView_historico_vendas.RowHeadersWidth = 62;
-            this.dataGridView_historico_vendas.RowTemplate.Height = 28;
-            this.dataGridView_historico_vendas.Size = new System.Drawing.Size(621, 318);
-            this.dataGridView_historico_vendas.TabIndex = 21;
             // 
             // label1
             // 
@@ -270,6 +263,50 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Green Urban";
             // 
+            // dataGridView_venda
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_venda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView_venda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_venda.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView_venda.EnableHeadersVisualStyles = false;
+            this.dataGridView_venda.GridColor = System.Drawing.Color.Black;
+            this.dataGridView_venda.Location = new System.Drawing.Point(42, 89);
+            this.dataGridView_venda.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView_venda.Name = "dataGridView_venda";
+            this.dataGridView_venda.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_venda.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView_venda.RowHeadersVisible = false;
+            this.dataGridView_venda.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            this.dataGridView_venda.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView_venda.RowTemplate.Height = 28;
+            this.dataGridView_venda.Size = new System.Drawing.Size(621, 318);
+            this.dataGridView_venda.TabIndex = 25;
+            // 
             // tela_vendas_histórico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,8 +323,8 @@
             this.Load += new System.EventHandler(this.tela_vendas_histórico_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_historico_vendas)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_venda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,7 +335,6 @@
         private System.Windows.Forms.Button button_editar;
         private System.Windows.Forms.Button button_adicionar;
         private System.Windows.Forms.Button button_remover;
-        private System.Windows.Forms.DataGridView dataGridView_historico_vendas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_notificacao;
@@ -310,5 +346,6 @@
         private System.Windows.Forms.Button button_fornecedor;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dataGridView_venda;
     }
 }
