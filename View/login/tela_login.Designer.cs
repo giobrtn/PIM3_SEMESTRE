@@ -1,4 +1,6 @@
-﻿namespace PIM3_SEMESTRE.login
+﻿using System.Windows.Forms;
+
+namespace PIM3_SEMESTRE.login
 {
     partial class tela_login
     {
@@ -165,5 +167,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button_entrar;
         private System.Windows.Forms.Button button11;
+        private PaintEventHandler panel1_Paint;
     }
 }
