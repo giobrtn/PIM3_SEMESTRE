@@ -122,7 +122,7 @@ namespace PIM3_SEMESTRE.cliente
 
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO cliente (nome) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -134,7 +134,7 @@ namespace PIM3_SEMESTRE.cliente
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO cliente (cnpj) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -145,7 +145,7 @@ namespace PIM3_SEMESTRE.cliente
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO cliente (telefone) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 

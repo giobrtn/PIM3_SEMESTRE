@@ -56,7 +56,7 @@ namespace PIM3_SEMESTRE.vendas
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (cliente) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -67,7 +67,7 @@ namespace PIM3_SEMESTRE.vendas
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (data) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -78,7 +78,7 @@ namespace PIM3_SEMESTRE.vendas
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (pagamento) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -89,7 +89,7 @@ namespace PIM3_SEMESTRE.vendas
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (produto) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -100,7 +100,7 @@ namespace PIM3_SEMESTRE.vendas
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (quantidade) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -111,7 +111,7 @@ namespace PIM3_SEMESTRE.vendas
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (usuario) VALUES ()", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
