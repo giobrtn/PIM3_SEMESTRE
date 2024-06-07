@@ -12,19 +12,99 @@ namespace PIM3_SEMESTRE.cliente
 {
     public partial class tela_cliente_adicionar : Form
     {
+        public event EventHandler NotificacaoButtonClicked;
+        public event EventHandler FornecedorButtonClicked;
+        public event EventHandler VendasButtonClicked;
+        public event EventHandler RelatorioButtonClicked;
+        public event EventHandler ProducaoButtonClicked;
+        public event EventHandler SairButtonClicked;
+        public event EventHandler AddClientButtonClicked;
+        public event EventHandler ClientButtonClicked;
+        public event EventHandler CancelButtonClicked;
         public tela_cliente_adicionar()
         {
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button_notificacao_Click(object sender, EventArgs e)
         {
-
+            OnNotificacaoButtonClicked(EventArgs.Empty);
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void button_cliente_Click(object sender, EventArgs e)
         {
+            OnClientButtonClicked(EventArgs.Empty);
+        }
+        private void button_fornecedor_Click(object sender, EventArgs e)
+        {
+            OnFornecedorButtonClicked(EventArgs.Empty);
+        }
 
+        private void button_vendas_Click(object sender, EventArgs e)
+        {
+            OnVendasButtonClicked(EventArgs.Empty);
+        }
+
+        private void button_relatorio_Click(object sender, EventArgs e)
+        {
+            OnRelatorioButtonClicked(EventArgs.Empty);
+        }
+
+        private void button_producao_Click(object sender, EventArgs e)
+        {
+            OnProducaoButtonClicked(EventArgs.Empty);
+        }
+        private void button_cancelar_Click(object sender, EventArgs e)
+        {
+            OnCancelButtonClick(EventArgs.Empty);
+        }
+        private void button_sair_Click(object sender, EventArgs e)
+        {
+            OnSairButtonClicked(EventArgs.Empty);
+        }
+
+        private void button_adicionar_Click(object sender, EventArgs e)
+        {
+            OnAddClientButtonClicked(EventArgs.Empty);
+        }
+        protected virtual void OnCancelButtonClick(EventArgs e)
+        {
+            CancelButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnClientButtonClicked(EventArgs e)
+        {
+            ClientButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnAddClientButtonClicked(EventArgs e)
+        {
+            AddClientButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnNotificacaoButtonClicked(EventArgs e)
+        {
+            NotificacaoButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnFornecedorButtonClicked(EventArgs e)
+        {
+            FornecedorButtonClicked?.Invoke(this, e);
+        }
+        protected virtual void OnVendasButtonClicked(EventArgs e)
+        {
+            VendasButtonClicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnRelatorioButtonClicked(EventArgs e)
+        {
+            RelatorioButtonClicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnProducaoButtonClicked(EventArgs e)
+        {
+            ProducaoButtonClicked?.Invoke(this, e);
+        }
+
+        protected virtual void OnSairButtonClicked(EventArgs e)
+        {
+            SairButtonClicked?.Invoke(this, e);
         }
     }
 }

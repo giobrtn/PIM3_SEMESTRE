@@ -14,6 +14,7 @@ namespace PIM3_SEMESTRE.login
 {
     public partial class tela_login : Form
     {
+        public event EventHandler LoginSuccessful;
         public tela_login()
         {
             InitializeComponent();
@@ -31,16 +32,17 @@ namespace PIM3_SEMESTRE.login
             {
                 
                 MessageBox.Show("Login efetuado com sucesso!");
-                this.Hide();
-                tela_notificações tela = new tela_notificações();
-                tela.Show();
-                tela.Focus();
+                OnLoginSuccessful(EventArgs.Empty);
             }
             else
             {
                 MessageBox.Show("Login ou senha incorretos!");
                 limparCampos();
             }
+        }
+        protected virtual void OnLoginSuccessful(EventArgs e)
+        {
+            LoginSuccessful?.Invoke(this, e);
         }
     }
 }
