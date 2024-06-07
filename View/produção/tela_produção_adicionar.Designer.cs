@@ -119,7 +119,6 @@
             this.textBox_preco_final.Name = "textBox_preco_final";
             this.textBox_preco_final.Size = new System.Drawing.Size(76, 23);
             this.textBox_preco_final.TabIndex = 22;
-            this.textBox_preco_final.TextChanged += new System.EventHandler(this.textBox_preco_final_TextChanged);
             // 
             // label12
             // 
@@ -140,7 +139,6 @@
             this.textBox_preco_inicial.Name = "textBox_preco_inicial";
             this.textBox_preco_inicial.Size = new System.Drawing.Size(76, 23);
             this.textBox_preco_inicial.TabIndex = 20;
-            this.textBox_preco_inicial.TextChanged += new System.EventHandler(this.textBox_preco_inicial_TextChanged);
             // 
             // label11
             // 
@@ -161,7 +159,6 @@
             this.textBox_data.Name = "textBox_data";
             this.textBox_data.Size = new System.Drawing.Size(104, 23);
             this.textBox_data.TabIndex = 18;
-            this.textBox_data.TextChanged += new System.EventHandler(this.textBox_data_TextChanged);
             // 
             // label9
             // 
@@ -182,7 +179,6 @@
             this.textBox_fornecedor.Name = "textBox_fornecedor";
             this.textBox_fornecedor.Size = new System.Drawing.Size(175, 23);
             this.textBox_fornecedor.TabIndex = 16;
-            this.textBox_fornecedor.TextChanged += new System.EventHandler(this.textBox_fornecedor_TextChanged);
             // 
             // label8
             // 
@@ -215,7 +211,6 @@
             this.textBox_usuario.Name = "textBox_usuario";
             this.textBox_usuario.Size = new System.Drawing.Size(124, 23);
             this.textBox_usuario.TabIndex = 13;
-            this.textBox_usuario.TextChanged += new System.EventHandler(this.textBox_usuario_TextChanged);
             // 
             // label7
             // 
@@ -247,7 +242,6 @@
             this.textBox_quantidade.Name = "textBox_quantidade";
             this.textBox_quantidade.Size = new System.Drawing.Size(76, 23);
             this.textBox_quantidade.TabIndex = 10;
-            this.textBox_quantidade.TextChanged += new System.EventHandler(this.textBox_quantidade_TextChanged);
             // 
             // label5
             // 
@@ -268,7 +262,6 @@
             this.textBox4_estacao_preferencial.Name = "textBox4_estacao_preferencial";
             this.textBox4_estacao_preferencial.Size = new System.Drawing.Size(175, 23);
             this.textBox4_estacao_preferencial.TabIndex = 8;
-            this.textBox4_estacao_preferencial.TextChanged += new System.EventHandler(this.textBox4_estacao_preferencial_TextChanged);
             // 
             // label4
             // 
@@ -289,7 +282,6 @@
             this.textBox_tipo.Name = "textBox_tipo";
             this.textBox_tipo.Size = new System.Drawing.Size(124, 23);
             this.textBox_tipo.TabIndex = 6;
-            this.textBox_tipo.TextChanged += new System.EventHandler(this.textBox_tipo_TextChanged);
             // 
             // label3
             // 
@@ -310,7 +302,6 @@
             this.textBox_categoria.Name = "textBox_categoria";
             this.textBox_categoria.Size = new System.Drawing.Size(115, 23);
             this.textBox_categoria.TabIndex = 4;
-            this.textBox_categoria.TextChanged += new System.EventHandler(this.textBox_categoria_TextChanged);
             // 
             // label2
             // 
@@ -331,7 +322,6 @@
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(175, 23);
             this.textBox_nome.TabIndex = 2;
-            this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
             // 
             // label1
             // 
