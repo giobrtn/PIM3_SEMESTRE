@@ -91,7 +91,34 @@ namespace PIM3_SEMESTRE
 
         private void button_adicionar_Click(object sender, EventArgs e)
         {
-            OnAddFornecedorButtonClicked(EventArgs.Empty);
+            string nome = textBox_nome_empresa.Text;
+            string cnpj = textBox_cnpj.Text;
+            string telefone = textBox_telefone.Text;
+            
+
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO produto (nome, cnpj, telefone) " +
+                               "VALUES (@nomefornecedor, @cnpj, @telefone)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("nome", nome);
+                cmd.Parameters.AddWithValue("cnpj", cnpj);
+                cmd.Parameters.AddWithValue("telefone", telefone);
+                    
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Produto adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar produto: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
         protected virtual void OnCancelButtonClicked(EventArgs e)
         {
@@ -132,6 +159,7 @@ namespace PIM3_SEMESTRE
         {
             SairButtonClicked?.Invoke(this, e);
         }
+
 
         private void textBox_nome_empresa_TextChanged(object sender, EventArgs e)
         {

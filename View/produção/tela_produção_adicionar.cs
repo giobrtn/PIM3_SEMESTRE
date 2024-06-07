@@ -161,7 +161,7 @@ namespace PIM3_SEMESTRE.produção
             try
             {
                 conn.Open();
-                string query = "INSERT INTO produto (nome, categoria, tipo, estacaopreferencial, data, usuario, fornecedor, quantidade, precoinicial, precofinal) " +
+                string query = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, usuario, idfornecedor, quantidadeestoque, preco, precofinal) " +
                                "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
 
@@ -253,6 +253,11 @@ namespace PIM3_SEMESTRE.produção
         protected virtual void OnSairButtonClicked(EventArgs e)
         {
             SairButtonClicked?.Invoke(this, e);
+        }
+
+        private void textBox_nome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
