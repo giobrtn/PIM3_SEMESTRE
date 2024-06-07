@@ -30,6 +30,10 @@
         {
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox_preco_final = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox_preco_inicial = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBox_data = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox_fornecedor = new System.Windows.Forms.TextBox();
@@ -58,10 +62,6 @@
             this.button_cliente = new System.Windows.Forms.Button();
             this.button_fornecedor = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.textBox_preco_inicial = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox_preco_final = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,48 @@
             this.panel1.Size = new System.Drawing.Size(707, 498);
             this.panel1.TabIndex = 23;
             // 
+            // textBox_preco_final
+            // 
+            this.textBox_preco_final.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_preco_final.Location = new System.Drawing.Point(489, 318);
+            this.textBox_preco_final.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_preco_final.Name = "textBox_preco_final";
+            this.textBox_preco_final.Size = new System.Drawing.Size(76, 23);
+            this.textBox_preco_final.TabIndex = 22;
+            this.textBox_preco_final.TextChanged += new System.EventHandler(this.textBox_preco_final_TextChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(486, 291);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 15);
+            this.label12.TabIndex = 21;
+            this.label12.Text = "Preço final";
+            // 
+            // textBox_preco_inicial
+            // 
+            this.textBox_preco_inicial.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_preco_inicial.Location = new System.Drawing.Point(394, 318);
+            this.textBox_preco_inicial.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_preco_inicial.Name = "textBox_preco_inicial";
+            this.textBox_preco_inicial.Size = new System.Drawing.Size(76, 23);
+            this.textBox_preco_inicial.TabIndex = 20;
+            this.textBox_preco_inicial.TextChanged += new System.EventHandler(this.textBox_preco_inicial_TextChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(391, 291);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 15);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Preço inicial";
+            // 
             // textBox_data
             // 
             this.textBox_data.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,6 +161,7 @@
             this.textBox_data.Name = "textBox_data";
             this.textBox_data.Size = new System.Drawing.Size(104, 23);
             this.textBox_data.TabIndex = 18;
+            this.textBox_data.TextChanged += new System.EventHandler(this.textBox_data_TextChanged);
             // 
             // label9
             // 
@@ -139,6 +182,7 @@
             this.textBox_fornecedor.Name = "textBox_fornecedor";
             this.textBox_fornecedor.Size = new System.Drawing.Size(175, 23);
             this.textBox_fornecedor.TabIndex = 16;
+            this.textBox_fornecedor.TextChanged += new System.EventHandler(this.textBox_fornecedor_TextChanged);
             // 
             // label8
             // 
@@ -171,6 +215,7 @@
             this.textBox_usuario.Name = "textBox_usuario";
             this.textBox_usuario.Size = new System.Drawing.Size(124, 23);
             this.textBox_usuario.TabIndex = 13;
+            this.textBox_usuario.TextChanged += new System.EventHandler(this.textBox_usuario_TextChanged);
             // 
             // label7
             // 
@@ -202,6 +247,7 @@
             this.textBox_quantidade.Name = "textBox_quantidade";
             this.textBox_quantidade.Size = new System.Drawing.Size(76, 23);
             this.textBox_quantidade.TabIndex = 10;
+            this.textBox_quantidade.TextChanged += new System.EventHandler(this.textBox_quantidade_TextChanged);
             // 
             // label5
             // 
@@ -222,6 +268,7 @@
             this.textBox4_estacao_preferencial.Name = "textBox4_estacao_preferencial";
             this.textBox4_estacao_preferencial.Size = new System.Drawing.Size(175, 23);
             this.textBox4_estacao_preferencial.TabIndex = 8;
+            this.textBox4_estacao_preferencial.TextChanged += new System.EventHandler(this.textBox4_estacao_preferencial_TextChanged);
             // 
             // label4
             // 
@@ -242,6 +289,7 @@
             this.textBox_tipo.Name = "textBox_tipo";
             this.textBox_tipo.Size = new System.Drawing.Size(124, 23);
             this.textBox_tipo.TabIndex = 6;
+            this.textBox_tipo.TextChanged += new System.EventHandler(this.textBox_tipo_TextChanged);
             // 
             // label3
             // 
@@ -262,6 +310,7 @@
             this.textBox_categoria.Name = "textBox_categoria";
             this.textBox_categoria.Size = new System.Drawing.Size(115, 23);
             this.textBox_categoria.TabIndex = 4;
+            this.textBox_categoria.TextChanged += new System.EventHandler(this.textBox_categoria_TextChanged);
             // 
             // label2
             // 
@@ -282,6 +331,7 @@
             this.textBox_nome.Name = "textBox_nome";
             this.textBox_nome.Size = new System.Drawing.Size(175, 23);
             this.textBox_nome.TabIndex = 2;
+            this.textBox_nome.TextChanged += new System.EventHandler(this.textBox_nome_TextChanged);
             // 
             // label1
             // 
@@ -441,46 +491,6 @@
             this.button11.Size = new System.Drawing.Size(60, 48);
             this.button11.TabIndex = 31;
             this.button11.UseVisualStyleBackColor = false;
-            // 
-            // textBox_preco_inicial
-            // 
-            this.textBox_preco_inicial.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_preco_inicial.Location = new System.Drawing.Point(394, 318);
-            this.textBox_preco_inicial.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_preco_inicial.Name = "textBox_preco_inicial";
-            this.textBox_preco_inicial.Size = new System.Drawing.Size(76, 23);
-            this.textBox_preco_inicial.TabIndex = 20;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(391, 291);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 15);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Preço inicial";
-            // 
-            // textBox_preco_final
-            // 
-            this.textBox_preco_final.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_preco_final.Location = new System.Drawing.Point(489, 318);
-            this.textBox_preco_final.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_preco_final.Name = "textBox_preco_final";
-            this.textBox_preco_final.Size = new System.Drawing.Size(76, 23);
-            this.textBox_preco_final.TabIndex = 22;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(486, 291);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 15);
-            this.label12.TabIndex = 21;
-            this.label12.Text = "Preço final";
             // 
             // tela_produção_adicionar
             // 

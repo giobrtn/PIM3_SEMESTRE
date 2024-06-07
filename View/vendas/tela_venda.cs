@@ -125,5 +125,71 @@ namespace PIM3_SEMESTRE.vendas
         {
             SairButtonClicked?.Invoke(this, e);
         }
+
+        private void textBox_cliente_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (cliente) VALUES ()", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_data_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (data) VALUES ()", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_pagamento_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (pagamento) VALUES ()", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_produto_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (produto) VALUES ()", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_quantidade_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (quantidade) VALUES ()", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
+
+        private void textBox_usuario_TextChanged(object sender, EventArgs e)
+        {
+            conn.Open();
+
+            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (usuario) VALUES ()", conn);
+
+            NpgsqlDataReader dr = c1.ExecuteReader();
+
+            conn.Close();
+        }
     }
 }

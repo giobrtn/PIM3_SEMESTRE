@@ -104,6 +104,7 @@
             this.textBox_cidade.Name = "textBox_cidade";
             this.textBox_cidade.Size = new System.Drawing.Size(124, 23);
             this.textBox_cidade.TabIndex = 13;
+            this.textBox_cidade.TextChanged += new System.EventHandler(this.textBox_cidade_TextChanged);
             // 
             // label7
             // 
@@ -135,6 +136,7 @@
             this.textBox_numero.Name = "textBox_numero";
             this.textBox_numero.Size = new System.Drawing.Size(76, 23);
             this.textBox_numero.TabIndex = 10;
+            this.textBox_numero.TextChanged += new System.EventHandler(this.textBox_numero_TextChanged);
             // 
             // label5
             // 
@@ -155,6 +157,7 @@
             this.textBox_logradouro.Name = "textBox_logradouro";
             this.textBox_logradouro.Size = new System.Drawing.Size(175, 23);
             this.textBox_logradouro.TabIndex = 8;
+            this.textBox_logradouro.TextChanged += new System.EventHandler(this.textBox_logradouro_TextChanged);
             // 
             // label4
             // 
@@ -175,6 +178,7 @@
             this.textBox_telefone.Name = "textBox_telefone";
             this.textBox_telefone.Size = new System.Drawing.Size(124, 23);
             this.textBox_telefone.TabIndex = 6;
+            this.textBox_telefone.TextChanged += new System.EventHandler(this.textBox_telefone_TextChanged);
             // 
             // label3
             // 
@@ -195,6 +199,7 @@
             this.textBox_cnpj.Name = "textBox_cnpj";
             this.textBox_cnpj.Size = new System.Drawing.Size(115, 23);
             this.textBox_cnpj.TabIndex = 4;
+            this.textBox_cnpj.TextChanged += new System.EventHandler(this.textBox_cnpj_TextChanged);
             // 
             // label2
             // 
@@ -215,6 +220,7 @@
             this.textBox_nome_empresa.Name = "textBox_nome_empresa";
             this.textBox_nome_empresa.Size = new System.Drawing.Size(175, 23);
             this.textBox_nome_empresa.TabIndex = 2;
+            this.textBox_nome_empresa.TextChanged += new System.EventHandler(this.textBox_nome_empresa_TextChanged);
             // 
             // label1
             // 
@@ -238,6 +244,7 @@
             this.button_adicionar.TabIndex = 0;
             this.button_adicionar.Text = "Adicionar";
             this.button_adicionar.UseVisualStyleBackColor = true;
+            this.button_adicionar.Click += new System.EventHandler(this.button_adicionar_Click_1);
             // 
             // label8
             // 
