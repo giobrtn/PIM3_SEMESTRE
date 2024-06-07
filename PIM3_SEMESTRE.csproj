@@ -106,11 +106,6 @@
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FornecedorDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
-    <Compile Include="DAO\OrdemProducaoDAO.cs" />
-    <Compile Include="DAO\PedidoVendaDAO.cs" />
-    <Compile Include="DAO\ProdutoDAO.cs" />
-    <Compile Include="GerenciadorNavegacao\NavigationManager.cs" />
-    <Compile Include="Interface\INavigable.cs" />
     <Compile Include="Model\ClienteModel.cs" />
     <Compile Include="Model\FornecedorModel.cs" />
     <Compile Include="Model\OrdemProducaoModel.cs" />
@@ -146,12 +141,6 @@
     </Compile>
     <Compile Include="View\login\tela_login.Designer.cs">
       <DependentUpon>tela_login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\main\main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\main\main.Designer.cs">
-      <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <Compile Include="View\notificações\tela_notificações.cs">
       <SubType>Form</SubType>
@@ -211,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\login\tela_login.resx">
       <DependentUpon>tela_login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\main\main.resx">
-      <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\notificações\tela_notificações.resx">
       <DependentUpon>tela_notificações.cs</DependentUpon>
