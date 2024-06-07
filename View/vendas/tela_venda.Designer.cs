@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(tela_venda));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox_total_venda = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.button_historico = new System.Windows.Forms.Button();
             this.textBox_quantidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.button_fornecedor = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.button11 = new System.Windows.Forms.Button();
-            this.textBox_total_venda = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +91,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 498);
             this.panel1.TabIndex = 4;
+            // 
+            // textBox_total_venda
+            // 
+            this.textBox_total_venda.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_total_venda.Location = new System.Drawing.Point(454, 376);
+            this.textBox_total_venda.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox_total_venda.Name = "textBox_total_venda";
+            this.textBox_total_venda.Size = new System.Drawing.Size(160, 23);
+            this.textBox_total_venda.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(451, 350);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 15);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Total Venda";
             // 
             // button_historico
             // 
@@ -305,6 +325,7 @@
             this.button_notificacao.TabIndex = 23;
             this.button_notificacao.Text = "Notificações";
             this.button_notificacao.UseVisualStyleBackColor = false;
+            this.button_notificacao.Click += new System.EventHandler(this.button_notificacao_Click);
             // 
             // button_producao
             // 
@@ -319,6 +340,7 @@
             this.button_producao.TabIndex = 22;
             this.button_producao.Text = "Produção";
             this.button_producao.UseVisualStyleBackColor = false;
+            this.button_producao.Click += new System.EventHandler(this.button_producao_Click);
             // 
             // button_sair
             // 
@@ -333,6 +355,7 @@
             this.button_sair.TabIndex = 21;
             this.button_sair.Text = "Sair";
             this.button_sair.UseVisualStyleBackColor = false;
+            this.button_sair.Click += new System.EventHandler(this.button_sair_Click);
             // 
             // button_relatorio
             // 
@@ -347,6 +370,7 @@
             this.button_relatorio.TabIndex = 20;
             this.button_relatorio.Text = "Relatório";
             this.button_relatorio.UseVisualStyleBackColor = false;
+            this.button_relatorio.Click += new System.EventHandler(this.button_relatorio_Click);
             // 
             // button_vendas
             // 
@@ -361,6 +385,7 @@
             this.button_vendas.TabIndex = 19;
             this.button_vendas.Text = "Vendas";
             this.button_vendas.UseVisualStyleBackColor = false;
+            this.button_vendas.Click += new System.EventHandler(this.button_vendas_Click);
             // 
             // button_cliente
             // 
@@ -375,6 +400,7 @@
             this.button_cliente.TabIndex = 18;
             this.button_cliente.Text = "Clientes";
             this.button_cliente.UseVisualStyleBackColor = false;
+            this.button_cliente.Click += new System.EventHandler(this.button_cliente_Click);
             // 
             // button_fornecedor
             // 
@@ -390,6 +416,7 @@
             this.button_fornecedor.TabIndex = 17;
             this.button_fornecedor.Text = "Fornecedores";
             this.button_fornecedor.UseVisualStyleBackColor = false;
+            this.button_fornecedor.Click += new System.EventHandler(this.button_fornecedor_Click);
             // 
             // imageList1
             // 
@@ -413,26 +440,6 @@
             this.button11.Size = new System.Drawing.Size(60, 48);
             this.button11.TabIndex = 24;
             this.button11.UseVisualStyleBackColor = false;
-            // 
-            // textBox_total_venda
-            // 
-            this.textBox_total_venda.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_total_venda.Location = new System.Drawing.Point(454, 376);
-            this.textBox_total_venda.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox_total_venda.Name = "textBox_total_venda";
-            this.textBox_total_venda.Size = new System.Drawing.Size(160, 23);
-            this.textBox_total_venda.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(451, 350);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 15);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Total Venda";
             // 
             // tela_venda
             // 

@@ -97,18 +97,38 @@ namespace PIM3_SEMESTRE.View.main
         private void OnVendasButtonClicked(object sender, EventArgs e)
         {
             tela_venda vendasForm = new tela_venda();
+            vendasForm.FornecedorButtonClicked += OnFornecedorButtonClicked;
+            vendasForm.NotificacaoButtonClicked += OnNotificacaoButtonClicked;
+            vendasForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
+            vendasForm.ProducaoButtonClicked += OnProducaoButtonClicked;
+            vendasForm.SairButtonClicked += OnSairButtonClicked;
+            vendasForm.ClienteButtonClicked += OnClienteButtonClicked;
+            vendasForm.VendasButtonClicked += OnVendasButtonClicked;
             ShowFormInPanel(vendasForm);
         }
         
         private void OnRelatorioButtonClicked(object sender, EventArgs e)
         {
             tela_relatório relatorioForm = new tela_relatório();
+            relatorioForm.FornecedorButtonClicked += OnFornecedorButtonClicked;
+            relatorioForm.NotificacaoButtonClicked += OnNotificacaoButtonClicked;
+            relatorioForm.VendasButtonClicked += OnVendasButtonClicked;
+            relatorioForm.ProducaoButtonClicked += OnProducaoButtonClicked;
+            relatorioForm.SairButtonClicked += OnSairButtonClicked;
+            relatorioForm.ClienteButtonClicked += OnClienteButtonClicked;
+
             ShowFormInPanel(relatorioForm);
         }
 
         private void OnProducaoButtonClicked(object sender, EventArgs e)
         {
             tela_producao producaoForm = new tela_producao();
+            producaoForm.FornecedorButtonClicked += OnFornecedorButtonClicked;
+            producaoForm.NotificacaoButtonClicked += OnNotificacaoButtonClicked;
+            producaoForm.VendasButtonClicked += OnVendasButtonClicked;
+            producaoForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
+            producaoForm.SairButtonClicked += OnSairButtonClicked;
+            producaoForm.ClienteButtonClicked += OnClienteButtonClicked;
             ShowFormInPanel(producaoForm);
         }
 
