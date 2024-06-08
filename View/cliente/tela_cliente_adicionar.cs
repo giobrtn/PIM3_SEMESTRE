@@ -120,69 +120,31 @@ namespace PIM3_SEMESTRE.cliente
         private void textBox_nome_empresa_TextChanged(object sender, EventArgs e)
         {
 
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO cliente (nome) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-
         }
 
         private void textBox_cnpj_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO cliente (cnpj) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_telefone_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO cliente (telefone) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_logradouro_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
         }
 
         private void textBox_numero_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_cidade_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void button_adicionar_Click_1(object sender, EventArgs e)

@@ -89,36 +89,18 @@ namespace PIM3_SEMESTRE
             OnSairButtonClicked(EventArgs.Empty);
         }
 
+        private string ObterEnderecoCompleto()
+        {
+            string logradouro = textBox_logradouro.Text;
+            string numero = textBox_numero.Text;
+            string cidade = textBox_cidade.Text;
+
+            return $"{logradouro}, {numero}, {cidade}";
+        }
+
         private void button_adicionar_Click(object sender, EventArgs e)
         {
-            string nome = textBox_nome_empresa.Text;
-            string cnpj = textBox_cnpj.Text;
-            string telefone = textBox_telefone.Text;
-            
-
-            try
-            {
-                conn.Open();
-                string query = "INSERT INTO produto (nome, cnpj, telefone) " +
-                               "VALUES (@nomefornecedor, @cnpj, @telefone)";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("nome", nome);
-                cmd.Parameters.AddWithValue("cnpj", cnpj);
-                cmd.Parameters.AddWithValue("telefone", telefone);
-                    
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Produto adicionado com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar produto: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+           
         }
         protected virtual void OnCancelButtonClicked(EventArgs e)
         {
@@ -160,71 +142,67 @@ namespace PIM3_SEMESTRE
             SairButtonClicked?.Invoke(this, e);
         }
 
-
+        
         private void textBox_nome_empresa_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO fornecedor (nome) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_cnpj_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO fornecedor (cnpj) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_telefone_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO fornecedor (telefone) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_logradouro_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_numero_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            
         }
 
         private void textBox_cidade_TextChanged(object sender, EventArgs e)
         {
-            conn.Open();
+            
+        }
 
-            NpgsqlCommand c1 = new NpgsqlCommand("", conn);
+        private void button_adicionar_Click_1(object sender, EventArgs e)
+        {
+            string nome = textBox_nome_empresa.Text;
+            string cnpj = textBox_cnpj.Text;
+            string telefone = textBox_telefone.Text;
+            string endereco = ObterEnderecoCompleto();
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO fornecedor (nomeFornecedor, cnpj, telefone, enderecoFornecedor) " +
+                               "VALUES (@nomefornecedor, @cnpj, @telefone, @ObterEnderecoCompleto)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
 
-            NpgsqlDataReader dr = c1.ExecuteReader();
+                cmd.Parameters.AddWithValue("nome", nome);
+                cmd.Parameters.AddWithValue("cnpj", cnpj);
+                cmd.Parameters.AddWithValue("telefone", telefone);
+                cmd.Parameters.AddWithValue("endereco", endereco);
 
-            conn.Close();
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Fornecedor adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar fornecedor: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
     }
 }

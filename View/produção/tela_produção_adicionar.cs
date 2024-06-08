@@ -161,7 +161,7 @@ namespace PIM3_SEMESTRE.produção
             try
             {
                 conn.Open();
-                string query = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, usuario, idfornecedor, quantidadeestoque, preco, precofinal) " +
+                string query = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal) " +
                                "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
 
@@ -169,7 +169,18 @@ namespace PIM3_SEMESTRE.produção
                 cmd.Parameters.AddWithValue("categoria", categoria);
                 cmd.Parameters.AddWithValue("tipo", tipo);
                 cmd.Parameters.AddWithValue("estacaoPreferencial", estacaoPreferencial);
-                cmd.Parameters.AddWithValue("data", data);
+
+                DateTime dataConvertida;
+                if (DateTime.TryParse(data, out dataConvertida))
+                {
+                    cmd.Parameters.AddWithValue("data", dataConvertida);
+                }
+                else
+                {
+                    MessageBox.Show("Data inválida.");
+                    return;
+                }
+
                 cmd.Parameters.AddWithValue("usuario", usuario);
                 cmd.Parameters.AddWithValue("fornecedor", fornecedor);
                 cmd.Parameters.AddWithValue("quantidade", quantidade);
