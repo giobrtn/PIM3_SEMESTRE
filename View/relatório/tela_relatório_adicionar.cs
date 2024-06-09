@@ -39,7 +39,7 @@ namespace PIM3_SEMESTRE.relatório
             try
             {
                 conn.Open();
-                string query = "SELECT *  FROM tipo WHERE data IS data";
+                string query = "SELECT *  FROM {tipo} WHERE data IS {data}";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("tipo", tipo);

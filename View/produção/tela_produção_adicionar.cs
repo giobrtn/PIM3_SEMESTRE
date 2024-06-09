@@ -270,5 +270,10 @@ namespace PIM3_SEMESTRE.produção
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

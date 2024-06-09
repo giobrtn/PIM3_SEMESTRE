@@ -181,10 +181,10 @@ namespace PIM3_SEMESTRE
             {
                 conn.Open();
                 string query = "INSERT INTO fornecedor (nomeFornecedor, cnpj, telefone, enderecoFornecedor) " +
-                               "VALUES (@nomefornecedor, @cnpj, @telefone, @ObterEnderecoCompleto)";
+                               "VALUES (@nomefornecedor, @cnpj, @telefone, @endereco)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("nome", nome);
+                cmd.Parameters.AddWithValue("nomeFornecedor", nome);
                 cmd.Parameters.AddWithValue("cnpj", cnpj);
                 cmd.Parameters.AddWithValue("telefone", telefone);
                 cmd.Parameters.AddWithValue("endereco", endereco);

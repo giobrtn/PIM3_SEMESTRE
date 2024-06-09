@@ -177,9 +177,10 @@
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(141, 448);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(102, 25);
+            this.label8.Size = new System.Drawing.Size(125, 25);
             this.label8.TabIndex = 15;
-            this.label8.Text = "Fornecedor";
+            this.label8.Text = "Fornecedor ID";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // button_cancelar
             // 
