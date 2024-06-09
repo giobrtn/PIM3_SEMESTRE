@@ -191,5 +191,54 @@ namespace PIM3_SEMESTRE.vendas
 
             conn.Close();
         }
+
+        private void button_confirmar_Click(object sender, EventArgs e)
+        {
+            string cliente = textBox_cliente.Text;
+            string data = textBox_data.Text;
+            string pagamento = textBox_pagamento.Text;
+            string produto = textBox_produto.Text;
+            string quantidade = textBox_quantidade.Text;
+            string usuario = textBox_usuario.Text;
+            string totalvenda = textBox_total_venda.Text;
+
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO pedidovenda (idcliente, datavenda, pagamento, idproduto, quantidade, idusuario, totalvenda) " +
+                               "VALUES (@cliente, @data, @pagamento, @produto, @quantidade, @usuario, @totalvenda)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("cliente", cliente);
+
+                DateTime dataConvertida;
+                if (DateTime.TryParse(data, out dataConvertida))
+                {
+                    cmd.Parameters.AddWithValue("data", dataConvertida);
+                }
+                else
+                {
+                    MessageBox.Show("Data inválida.");
+                    return;
+                }
+
+                cmd.Parameters.AddWithValue("pagamento", pagamento);
+                cmd.Parameters.AddWithValue("produto", produto);
+                cmd.Parameters.AddWithValue("quantidade", quantidade);
+                cmd.Parameters.AddWithValue("usuario", usuario);
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Venda adicionada com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar venda: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

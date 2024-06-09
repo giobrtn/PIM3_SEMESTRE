@@ -31,7 +31,14 @@ namespace PIM3_SEMESTRE
                 "Database=sistema;" +
                 "Uid=postgres;" +
                 "Pwd=dbadmin;");
+        private string ObterEnderecoCompleto()
+        {
+            string logradouro = textBox_logradouro.Text;
+            string numero = textBox_numero.Text;
+            string cidade = textBox_cidade.Text;
 
+            return $"{logradouro}, {numero}, {cidade}";
+        }
         public tela_fornecedor_adicionar()
         {
             InitializeComponent();
@@ -87,15 +94,6 @@ namespace PIM3_SEMESTRE
         private void button_sair_Click(object sender, EventArgs e)
         {
             OnSairButtonClicked(EventArgs.Empty);
-        }
-
-        private string ObterEnderecoCompleto()
-        {
-            string logradouro = textBox_logradouro.Text;
-            string numero = textBox_numero.Text;
-            string cidade = textBox_cidade.Text;
-
-            return $"{logradouro}, {numero}, {cidade}";
         }
 
         private void button_adicionar_Click(object sender, EventArgs e)

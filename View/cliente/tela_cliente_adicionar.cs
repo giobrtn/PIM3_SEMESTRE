@@ -31,6 +31,15 @@ namespace PIM3_SEMESTRE.cliente
                 "Database=sistema;" +
                 "Uid=postgres;" +
                 "Pwd=dbadmin;");
+
+        private string ObterEnderecoCompleto()
+        {
+            string logradouro = textBox_logradouro.Text;
+            string numero = textBox_numero.Text;
+            string cidade = textBox_cidade.Text;
+
+            return $"{logradouro}, {numero}, {cidade}";
+        }
         public tela_cliente_adicionar()
         {
             InitializeComponent();
@@ -148,6 +157,39 @@ namespace PIM3_SEMESTRE.cliente
         }
 
         private void button_adicionar_Click_1(object sender, EventArgs e)
+        {
+            string nome = textBox_nome_empresa.Text;
+            string cnpj = textBox_cnpj.Text;
+            string telefone = textBox_telefone.Text;
+            string endereco = ObterEnderecoCompleto();
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO cliente (nomeCliente, cpf, telefone, enderecoCliente) " +
+                               "VALUES (@nomefornecedor, @cnpj, @telefone, @ObterEnderecoCompleto)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("nome", nome);
+                cmd.Parameters.AddWithValue("cnpj", cnpj);
+                cmd.Parameters.AddWithValue("telefone", telefone);
+                cmd.Parameters.AddWithValue("endereco", endereco);
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Cliente adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar cliente: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
