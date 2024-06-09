@@ -76,14 +76,14 @@ namespace PIM3_SEMESTRE.fornecedor
                     cmd.Parameters.AddWithValue("idfornecedor", idFornecedor);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Fornecedor desativado com sucesso!");
+                    MessageBox.Show("Fornecedor removido com sucesso!");
 
                     
                     dataGridView_fornecedor.Rows.RemoveAt(dataGridView_fornecedor.SelectedRows[0].Index);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao desativar fornecedor: " + ex.Message);
+                    MessageBox.Show("Erro ao remover fornecedor: " + ex.Message);
                 }
                 finally
                 {
@@ -92,7 +92,7 @@ namespace PIM3_SEMESTRE.fornecedor
             }
             else
             {
-                MessageBox.Show("Selecione um fornecedor para desativar.");
+                MessageBox.Show("Selecione um fornecedor para remover.");
             }
         }
 

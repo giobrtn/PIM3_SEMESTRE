@@ -39,7 +39,7 @@ namespace PIM3_SEMESTRE.cliente
 
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM cliente", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM cliente WHERE statuscliente != 0", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -53,6 +53,38 @@ namespace PIM3_SEMESTRE.cliente
             conn.Close();
 
 
+        }
+        private void button_remover_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_clientes.SelectedRows.Count > 0)
+            {
+                int idCliente = Convert.ToInt32(dataGridView_clientes.SelectedRows[0].Cells["idcliente"].Value);
+
+                try
+                {
+                    conn.Open();
+                    NpgsqlCommand cmd = new NpgsqlCommand("UPDATE cliente SET statuscliente = 0 WHERE idcliente = @idcliente", conn);
+                    cmd.Parameters.AddWithValue("idcliente", idCliente);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Cliente removido com sucesso!");
+
+
+                    dataGridView_clientes.Rows.RemoveAt(dataGridView_clientes.SelectedRows[0].Index);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao remover cliente: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para remover.");
+            }
         }
 
         private void tela_cliente_Load(object sender, EventArgs e)
