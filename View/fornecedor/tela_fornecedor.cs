@@ -46,7 +46,7 @@ namespace PIM3_SEMESTRE.fornecedor
 
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor WHERE statusfornecedor != 0", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -67,24 +67,23 @@ namespace PIM3_SEMESTRE.fornecedor
         {
             if (dataGridView_fornecedor.SelectedRows.Count > 0)
             {
-                
                 int idFornecedor = Convert.ToInt32(dataGridView_fornecedor.SelectedRows[0].Cells["idfornecedor"].Value);
 
                 try
                 {
                     conn.Open();
-                    NpgsqlCommand cmd = new NpgsqlCommand("DELETE FROM fornecedor WHERE idfornecedor = @idfornecedor", conn);
+                    NpgsqlCommand cmd = new NpgsqlCommand("UPDATE fornecedor SET statusfornecedor = 0 WHERE idfornecedor = @idfornecedor", conn);
                     cmd.Parameters.AddWithValue("idfornecedor", idFornecedor);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Fornecedor removido com sucesso!");
+                    MessageBox.Show("Fornecedor desativado com sucesso!");
 
-                    // Atualiza a lista de fornecedores
-                    button_fornecedor_Click(sender, e);
+                    
+                    dataGridView_fornecedor.Rows.RemoveAt(dataGridView_fornecedor.SelectedRows[0].Index);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao remover fornecedor: " + ex.Message);
+                    MessageBox.Show("Erro ao desativar fornecedor: " + ex.Message);
                 }
                 finally
                 {
@@ -93,7 +92,7 @@ namespace PIM3_SEMESTRE.fornecedor
             }
             else
             {
-                MessageBox.Show("Selecione um fornecedor para remover.");
+                MessageBox.Show("Selecione um fornecedor para desativar.");
             }
         }
 
