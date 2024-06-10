@@ -189,19 +189,22 @@ namespace PIM3_SEMESTRE.vendas
             // Calculando o total da venda
             double totalVenda = quantidade * precoFinal;
 
-           
+            
+            
 
             // Inserindo a venda no banco de dados
             try
             {
                 conn.Open();
                 string query = "INSERT INTO pedidovenda (idusuario, pagamento, idproduto, datavenda, quantidade, idcliente, totalvenda, statuspedido) " +
-                               "VALUES (@idusuario, @formaPagamento, @idproduto, @data, @quantidade, @idcliente, @totalVenda, @statusPedido)";
+                               "VALUES (@idusuario, @Pagamento, @idproduto, @data, @quantidade, @idcliente, @totalVenda, @statusPedido)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("idusuario", usuario);
                 cmd.Parameters.AddWithValue("pagamento", textBox_pagamento.Text);
                 cmd.Parameters.AddWithValue("idproduto", produto);
+
                 string data = textBox_data.Text;
+
                 DateTime dataConvertida;
                 if (DateTime.TryParse(data, out dataConvertida))
                 {
