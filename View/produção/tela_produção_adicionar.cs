@@ -188,7 +188,7 @@ namespace PIM3_SEMESTRE.produção
                 }
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Produto adicionado com sucesso!");
+                MessageBox.Show(idProduto != -1 ? "Produto atualizado com sucesso!" : "Produto adicionado com sucesso!");
             }
             catch (Exception ex)
             {
