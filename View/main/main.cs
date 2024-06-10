@@ -14,6 +14,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices.ComTypes;
+using Npgsql;
 
 namespace PIM3_SEMESTRE.View.main
 {
@@ -69,7 +71,7 @@ namespace PIM3_SEMESTRE.View.main
             notificacoesForm.SairButtonClicked += OnSairButtonClicked;
             ShowFormInPanel(notificacoesForm);
         }
-        private void OnFornecedorButtonClicked(object sender, EventArgs e) 
+        private void OnFornecedorButtonClicked(object sender, EventArgs e)
         {
             tela_fornecedor1cs fornecedorForm = new tela_fornecedor1cs();
             fornecedorForm.AddFornecedorButtonClicked += OnAddFornecedorButtonClicked;
@@ -79,7 +81,7 @@ namespace PIM3_SEMESTRE.View.main
             fornecedorForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             fornecedorForm.SairButtonClicked += OnSairButtonClicked;
             fornecedorForm.ClienteButtonClicked += OnClienteButtonClicked;
-            
+
             ShowFormInPanel(fornecedorForm);
         }
         private void OnAddFornecedorButtonClicked(object sender, EventArgs e)
@@ -107,7 +109,7 @@ namespace PIM3_SEMESTRE.View.main
             vendasForm.HistoricoButtonClicked += OnHistoricoButtonClicked;
             ShowFormInPanel(vendasForm);
         }
-        
+
         private void OnRelatorioButtonClicked(object sender, EventArgs e)
         {
             tela_relatório relatorioForm = new tela_relatório();
@@ -144,7 +146,7 @@ namespace PIM3_SEMESTRE.View.main
             addClienteForm.ProducaoButtonClicked += OnProducaoButtonClicked;
             addClienteForm.SairButtonClicked += OnSairButtonClicked;
             addClienteForm.ClientButtonClicked += OnClienteButtonClicked;
-            
+
             ShowFormInPanel(addClienteForm);
         }
         private void OnSairButtonClicked(object sender, EventArgs e)
@@ -194,6 +196,42 @@ namespace PIM3_SEMESTRE.View.main
             currentForm.Show();
         }
 
+        /*
+        private void CalcularData()
+        {
+
+            NpgsqlConnection conn = new NpgsqlConnection(
+                "Server=localhost;" +
+                "Port=5432;" +
+                "Database=sistema;" +
+                "Uid=postgres;" +
+                "Pwd=dbadmin;");
+
+            conn.Open();
+
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT (data) FROM produtos WHERE statusproduto != 0", conn);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            DateTime dataHoje = DateTime.Today;
+
+            while (reader.Read())
+            {
+                DateTime[] myArray = (DateTime[])reader.GetValue(0);
+                int x = myArray.Length;
+                // do your bidding
+                while (x >= 0)
+                {
+                   double diasSubtraidos = dataHoje.Subtract(myArray[x]).TotalDays;
+                   NpgsqlCommand("INSERT INTO produto (dias)" + "VALUES @diasSubtraidos");
+                    x--;
+                }
+            }
+
+            reader.Close();
+            
+
+        }
+
+        */
       
     }
 }

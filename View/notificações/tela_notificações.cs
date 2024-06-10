@@ -42,7 +42,7 @@ namespace PIM3_SEMESTRE.notificações
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("SELECT nomeproduto, tipo, categoria, estacaopreferencial, data FROM produto WHERE statusproduto != 0", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 

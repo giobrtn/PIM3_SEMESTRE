@@ -196,7 +196,7 @@ namespace PIM3_SEMESTRE.vendas
             try
             {
                 conn.Open();
-                string query = "INSERT INTO pedidovenda (idusuario, pagamento, idproduto, datavenda, quantidade, idcliente, totalvenda, statuspedido) " +
+                string query = "INSERT INTO pedidovenda (idusuario, pagamento, idproduto, data, quantidade, idcliente, totalvenda, statuspedido) " +
                                "VALUES (@idusuario, @Pagamento, @idproduto, @data, @quantidade, @idcliente, @totalVenda, @statusPedido)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("idusuario", usuario);
