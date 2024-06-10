@@ -33,9 +33,10 @@ namespace PIM3_SEMESTRE.produção
         public tela_produção_adicionar(int idProduto = -1)
         {
             InitializeComponent();
+            this.idProduto = idProduto;
             if (idProduto != -1)
             {
-                this.idProduto = idProduto;
+                
                 CarregarDetalhesProduto(idProduto);
 
             }
@@ -164,7 +165,6 @@ namespace PIM3_SEMESTRE.produção
                     return;
                 }
 
-                
                 double precoInicialValor;
                 if (double.TryParse(precoInicial, out precoInicialValor))
                 {
@@ -192,7 +192,7 @@ namespace PIM3_SEMESTRE.produção
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao adicionar produto: " + ex.Message);
+                MessageBox.Show("Erro ao adicionar/atualizar produto: " + ex.Message);
             }
             finally
             {
