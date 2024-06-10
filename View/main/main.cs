@@ -104,6 +104,7 @@ namespace PIM3_SEMESTRE.View.main
             vendasForm.SairButtonClicked += OnSairButtonClicked;
             vendasForm.ClienteButtonClicked += OnClienteButtonClicked;
             vendasForm.VendasButtonClicked += OnVendasButtonClicked;
+            vendasForm.HistoricoButtonClicked += OnHistoricoButtonClicked;
             ShowFormInPanel(vendasForm);
         }
         
@@ -151,6 +152,18 @@ namespace PIM3_SEMESTRE.View.main
             Application.Exit();
         }
 
+        private void OnHistoricoButtonClicked(object sender, EventArgs e)
+        {
+            tela_vendas_histórico historicoForm = new tela_vendas_histórico();
+            historicoForm.FornecedorButtonClicked += OnFornecedorButtonClicked;
+            historicoForm.NotificacaoButtonClicked += OnNotificacaoButtonClicked;
+            historicoForm.VendasButtonClicked += OnVendasButtonClicked;
+            historicoForm.RelatorioButtonClicked += OnRelatorioButtonClicked;
+            historicoForm.ProducaoButtonClicked += OnProducaoButtonClicked;
+            historicoForm.SairButtonClicked += OnSairButtonClicked;
+            historicoForm.ClienteButtonClicked += OnClienteButtonClicked;
+            ShowFormInPanel(historicoForm);
+        }
         private void OnAddProducaoButtonClicked(object sender, EventArgs e)
         {
             tela_produção_adicionar addProducaoForm = new tela_produção_adicionar();

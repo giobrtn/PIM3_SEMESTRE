@@ -21,6 +21,7 @@ namespace PIM3_SEMESTRE.vendas
         public event EventHandler ProducaoButtonClicked;
         public event EventHandler SairButtonClicked;
         public event EventHandler AddClientButtonClicked;
+        public event EventHandler HistoricoButtonClicked;
         public NpgsqlConnection Connection { get; set; } = null;
 
         NpgsqlConnection conn = new NpgsqlConnection(
@@ -40,25 +41,7 @@ namespace PIM3_SEMESTRE.vendas
 
         }
 
-        private void button_historico_Click(object sender, EventArgs e)
-        {
-
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM pedidovenda", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            if (dr.HasRows)
-            {
-                DataTable dt = new DataTable();
-                dt.Load(dr);
-                //dataGridView_historico_venda.DataSource = dt;
-            }
-
-            conn.Close();
-
-        }
+        
 
         private void button_notificacao_Click(object sender, EventArgs e)
         {
@@ -93,8 +76,15 @@ namespace PIM3_SEMESTRE.vendas
             OnSairButtonClicked(EventArgs.Empty);
         }
 
+        private void button_historico_Click(object sender, EventArgs e)
+        {
+            OnHistoricoButtonClicked(EventArgs.Empty);
+        }
 
-
+        protected virtual void OnHistoricoButtonClicked(EventArgs e)
+        {
+            HistoricoButtonClicked?.Invoke(this, e);
+        }
         protected virtual void OnNotificacaoButtonClicked(EventArgs e)
         {
             NotificacaoButtonClicked?.Invoke(this, e);
