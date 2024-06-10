@@ -98,9 +98,21 @@ namespace PIM3_SEMESTRE.produção
             try
             {
                 conn.Open();
-                string query = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal, statusproduto) " +
-                               "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal, @status)";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+                NpgsqlCommand cmd;
+                if (idProduto != -1)
+                {
+                    // Update query
+                    string updateQuery = "UPDATE produto SET nomeproduto = @nome, categoria = @categoria, tipo = @tipo, estacaopreferencial = @estacaoPreferencial, data = @data, idUsuario = @usuario, idFornecedor = @fornecedor, quantidadeestoque = @quantidade, preco = @precoInicial, precofinal = @precoFinal, statusproduto = @status WHERE idproduto = @idProduto";
+                    cmd = new NpgsqlCommand(updateQuery, conn);
+                    cmd.Parameters.AddWithValue("idProduto", idProduto);
+                }
+                else
+                {
+                    // Insert query
+                    string insertQuery = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal, statusproduto) " +
+                                         "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal, @status)";
+                    cmd = new NpgsqlCommand(insertQuery, conn);
+                }
 
                 cmd.Parameters.AddWithValue("nome", nome);
                 cmd.Parameters.AddWithValue("categoria", categoria);
