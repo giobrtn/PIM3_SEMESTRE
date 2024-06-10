@@ -142,10 +142,6 @@ namespace PIM3_SEMESTRE.cliente
             }
 
         }
-        public tela_cliente_adicionar()
-        {
-            InitializeComponent();
-        }
 
         private void button_notificacao_Click(object sender, EventArgs e)
         {

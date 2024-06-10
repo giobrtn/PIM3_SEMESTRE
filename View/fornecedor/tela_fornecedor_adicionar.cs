@@ -142,10 +142,7 @@ namespace PIM3_SEMESTRE
             }
         }
 
-        public tela_fornecedor_adicionar()
-        {
-            InitializeComponent();
-        }
+    
 
         private void tela_fornecedor_Load(object sender, EventArgs e)
         {
