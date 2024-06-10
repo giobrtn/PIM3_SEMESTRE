@@ -36,6 +36,8 @@ namespace PIM3_SEMESTRE.relatório
 
         private void button_relatorio_Click(object sender, EventArgs e)
         {
+            /*
+
             conn.Open();
 
             NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor", conn);
@@ -50,6 +52,8 @@ namespace PIM3_SEMESTRE.relatório
             }
 
             conn.Close();
+
+            */
 
         }
 
@@ -115,6 +119,58 @@ namespace PIM3_SEMESTRE.relatório
         protected virtual void OnSairButtonClicked(EventArgs e)
         {
             SairButtonClicked?.Invoke(this, e);
+        }
+
+        private void button_gerar_Click(object sender, EventArgs e)
+        {
+
+            string tipo = textBox_tipo.Text;
+            string dataString = textBox_data.Text;
+
+
+            if (string.IsNullOrEmpty(tipo) || string.IsNullOrEmpty(dataString))
+            {
+                MessageBox.Show("Por favor, preencha o tipo e a data.");
+                return;
+            }
+
+
+            if (!DateTime.TryParse(dataString, out DateTime data))
+            {
+                MessageBox.Show("Formato de data inválido. Use o formato 'dd/MM/yyyy'.");
+                return;
+            }
+
+
+            string query = $"SELECT * FROM {tipo} WHERE data = @data";
+
+
+            conn.Open();
+
+
+            NpgsqlCommand command = new NpgsqlCommand(query, conn);
+           
+            command.Parameters.AddWithValue("@data", data.Date);
+
+
+            NpgsqlDataReader dr = command.ExecuteReader();
+
+
+            if (dr.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+
+
+                dataGridView_relatorio.DataSource = dt;
+            }
+            else
+            {
+                MessageBox.Show("Nenhum resultado encontrado.");
+            }
+
+
+            conn.Close();
         }
     }
 }

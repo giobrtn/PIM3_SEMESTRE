@@ -173,12 +173,6 @@
     <Compile Include="View\relatório\tela_relatório.Designer.cs">
       <DependentUpon>tela_relatório.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\relatório\tela_relatório_adicionar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\relatório\tela_relatório_adicionar.Designer.cs">
-      <DependentUpon>tela_relatório_adicionar.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\vendas\tela_venda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,9 +224,6 @@
     </Compile>
     <EmbeddedResource Include="View\relatório\tela_relatório.resx">
       <DependentUpon>tela_relatório.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\relatório\tela_relatório_adicionar.resx">
-      <DependentUpon>tela_relatório_adicionar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\vendas\tela_venda.resx">
       <DependentUpon>tela_venda.cs</DependentUpon>
