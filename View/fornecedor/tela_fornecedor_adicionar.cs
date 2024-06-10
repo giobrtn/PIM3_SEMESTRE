@@ -97,7 +97,7 @@ namespace PIM3_SEMESTRE
             }
         }
 
-        private void button_adicionar_Click_1(object sender, EventArgs e)
+        private void button_adicionar_Click(object sender, EventArgs e)
         {
             string nome = textBox_nome_empresa.Text;
             string cnpj = textBox_cnpj.Text;
@@ -111,96 +111,30 @@ namespace PIM3_SEMESTRE
                 if (idFornecedor != -1)
                 {
                     // Update query
-                    string updateQuery = "UPDATE produto SET nomeproduto = @nome, categoria = @categoria, tipo = @tipo, estacaopreferencial = @estacaoPreferencial, data = @data, idUsuario = @usuario, idFornecedor = @fornecedor, quantidadeestoque = @quantidade, preco = @precoInicial, precofinal = @precoFinal, statusproduto = @status WHERE idproduto = @idProduto";
+                    string updateQuery = "UPDATE fornecedor SET nomefornecedor = @nomefornecedor, cnpj = @cnpj, telefone = @telefone, enderecofornecedor = @endereco, statusfornecedor = @status WHERE idfornecedor = @idfornecedor";
                     cmd = new NpgsqlCommand(updateQuery, conn);
-                    cmd.Parameters.AddWithValue("idProduto", idFornecedor);
+                    cmd.Parameters.AddWithValue("idfornecedor", idFornecedor);
                 }
                 else
                 {
                     // Insert query
-                    string insertQuery = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal, statusproduto) " +
-                                         "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal, @status)";
+                    string insertQuery = "INSERT INTO fornecedor (nomefornecedor, cnpj, telefone, enderecofornecedor, statusfornecedor) " +
+                                         "VALUES (@nomefornecedor, @cnpj, @telefone, @endereco, @status)";
                     cmd = new NpgsqlCommand(insertQuery, conn);
                 }
 
-                cmd.Parameters.AddWithValue("nome", nome);
-                cmd.Parameters.AddWithValue("categoria", categoria);
-                cmd.Parameters.AddWithValue("tipo", tipo);
-                cmd.Parameters.AddWithValue("estacaoPreferencial", estacaoPreferencial);
+                cmd.Parameters.AddWithValue("nomefornecedor", nome);
+                cmd.Parameters.AddWithValue("cnpj", cnpj);
+                cmd.Parameters.AddWithValue("telefone", telefone);
+                cmd.Parameters.AddWithValue("endereco", endereco);
                 cmd.Parameters.AddWithValue("status", 1);
 
-                DateTime dataConvertida;
-                if (DateTime.TryParse(data, out dataConvertida))
-                {
-                    cmd.Parameters.AddWithValue("data", dataConvertida);
-                }
-                else
-                {
-                    MessageBox.Show("Data inválida.");
-                    return;
-                }
-
-                int idUsuario;
-                if (int.TryParse(usuario, out idUsuario))
-                {
-                    cmd.Parameters.AddWithValue("usuario", idUsuario);
-                }
-                else
-                {
-                    MessageBox.Show("ID do usuário inválido.");
-                    return;
-                }
-
-                int idFornecedor;
-                if (int.TryParse(fornecedor, out idFornecedor))
-                {
-                    cmd.Parameters.AddWithValue("fornecedor", idFornecedor);
-                }
-                else
-                {
-                    MessageBox.Show("ID do fornecedor inválido.");
-                    return;
-                }
-
-                int quantidadeValor;
-                if (int.TryParse(quantidade, out quantidadeValor))
-                {
-                    cmd.Parameters.AddWithValue("quantidade", quantidadeValor);
-                }
-                else
-                {
-                    MessageBox.Show("Quantidade inválida.");
-                    return;
-                }
-
-                double precoInicialValor;
-                if (double.TryParse(precoInicial, out precoInicialValor))
-                {
-                    cmd.Parameters.AddWithValue("precoInicial", precoInicialValor);
-                }
-                else
-                {
-                    MessageBox.Show("Preço inicial inválido.");
-                    return;
-                }
-
-                double precoFinalValor;
-                if (double.TryParse(precoFinal, out precoFinalValor))
-                {
-                    cmd.Parameters.AddWithValue("precoFinal", precoFinalValor);
-                }
-                else
-                {
-                    MessageBox.Show("Preço final inválido.");
-                    return;
-                }
-
                 cmd.ExecuteNonQuery();
-                MessageBox.Show(idProduto != -1 ? "Produto atualizado com sucesso!" : "Produto adicionado com sucesso!");
+                MessageBox.Show(idFornecedor != -1 ? "Fornecedor atualizado com sucesso!" : "Fornecedor adicionado com sucesso!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao adicionar/atualizar produto: " + ex.Message);
+                MessageBox.Show("Erro ao adicionar/atualizar fornecedor: " + ex.Message);
             }
             finally
             {
