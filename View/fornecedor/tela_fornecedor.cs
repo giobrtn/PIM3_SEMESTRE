@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static PIM3_SEMESTRE.DAO.conexao_banco;
 using Npgsql;
+using PIM3_SEMESTRE.produção;
 
 namespace PIM3_SEMESTRE.fornecedor
 {
@@ -98,7 +99,18 @@ namespace PIM3_SEMESTRE.fornecedor
 
         private void button_adicionar_Click(object sender, EventArgs e)
         {
-            OnAddFornecedorButtonClicked(EventArgs.Empty);
+            if (dataGridView_fornecedor.SelectedRows.Count > 0)
+            {
+                int idFornecedor = Convert.ToInt32(dataGridView_fornecedor.SelectedRows[0].Cells["idfornecedor"].Value);
+
+                // Abrir a tela de edição com o ID do produto selecionado
+                tela_produção_adicionar telaEdicao = new tela_produção_adicionar(idFornecedor);
+                telaEdicao.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para editar.");
+            }
         }
 
         protected virtual void OnAddFornecedorButtonClicked(EventArgs e)

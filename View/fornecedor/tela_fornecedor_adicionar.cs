@@ -31,6 +31,22 @@ namespace PIM3_SEMESTRE
                 "Database=sistema;" +
                 "Uid=postgres;" +
                 "Pwd=dbadmin;");
+
+        private int idFornecedor;
+        
+        public tela_fornecedor_adicionar(int idFornecedor = -1)
+        {
+            InitializeComponent();
+            this.idFornecedor = idFornecedor;
+            if (idFornecedor != -1)
+            {
+
+                CarregarDetalhesFornecedor(idFornecedor);
+
+            }
+
+        }
+
         private string ObterEnderecoCompleto()
         {
             string logradouro = textBox_logradouro.Text;
@@ -39,6 +55,159 @@ namespace PIM3_SEMESTRE
 
             return $"{logradouro}, {numero}, {cidade}";
         }
+
+        private void CarregarDetalhesFornecedor(int idFornecedor)
+        {
+
+            try
+            {
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM fornecedor WHERE idfornecedor = @idfornecedor", conn);
+                cmd.Parameters.AddWithValue("idfornecedor", idFornecedor);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+
+                    textBox_nome_empresa.Text = reader["nomefornecedor"].ToString();
+                    textBox_cnpj.Text = reader["cnpj"].ToString();
+                    textBox_telefone.Text = reader["telefone"].ToString();
+                    string[] enderecoParts = reader["enderecofornecedor"].ToString().Split(',');
+                    if (enderecoParts.Length == 3)
+                    {
+                        textBox_logradouro.Text = enderecoParts[0].Trim();
+                        textBox_numero.Text = enderecoParts[1].Trim();
+                        textBox_cidade.Text = enderecoParts[2].Trim();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Fornecedor não encontrado.");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar detalhes do fornecedor: " + ex.Message);
+                this.Close();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void button_adicionar_Click_1(object sender, EventArgs e)
+        {
+            string nome = textBox_nome_empresa.Text;
+            string cnpj = textBox_cnpj.Text;
+            string telefone = textBox_telefone.Text;
+            string endereco = ObterEnderecoCompleto();
+
+            try
+            {
+                conn.Open();
+                NpgsqlCommand cmd;
+                if (idFornecedor != -1)
+                {
+                    // Update query
+                    string updateQuery = "UPDATE produto SET nomeproduto = @nome, categoria = @categoria, tipo = @tipo, estacaopreferencial = @estacaoPreferencial, data = @data, idUsuario = @usuario, idFornecedor = @fornecedor, quantidadeestoque = @quantidade, preco = @precoInicial, precofinal = @precoFinal, statusproduto = @status WHERE idproduto = @idProduto";
+                    cmd = new NpgsqlCommand(updateQuery, conn);
+                    cmd.Parameters.AddWithValue("idProduto", idFornecedor);
+                }
+                else
+                {
+                    // Insert query
+                    string insertQuery = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal, statusproduto) " +
+                                         "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal, @status)";
+                    cmd = new NpgsqlCommand(insertQuery, conn);
+                }
+
+                cmd.Parameters.AddWithValue("nome", nome);
+                cmd.Parameters.AddWithValue("categoria", categoria);
+                cmd.Parameters.AddWithValue("tipo", tipo);
+                cmd.Parameters.AddWithValue("estacaoPreferencial", estacaoPreferencial);
+                cmd.Parameters.AddWithValue("status", 1);
+
+                DateTime dataConvertida;
+                if (DateTime.TryParse(data, out dataConvertida))
+                {
+                    cmd.Parameters.AddWithValue("data", dataConvertida);
+                }
+                else
+                {
+                    MessageBox.Show("Data inválida.");
+                    return;
+                }
+
+                int idUsuario;
+                if (int.TryParse(usuario, out idUsuario))
+                {
+                    cmd.Parameters.AddWithValue("usuario", idUsuario);
+                }
+                else
+                {
+                    MessageBox.Show("ID do usuário inválido.");
+                    return;
+                }
+
+                int idFornecedor;
+                if (int.TryParse(fornecedor, out idFornecedor))
+                {
+                    cmd.Parameters.AddWithValue("fornecedor", idFornecedor);
+                }
+                else
+                {
+                    MessageBox.Show("ID do fornecedor inválido.");
+                    return;
+                }
+
+                int quantidadeValor;
+                if (int.TryParse(quantidade, out quantidadeValor))
+                {
+                    cmd.Parameters.AddWithValue("quantidade", quantidadeValor);
+                }
+                else
+                {
+                    MessageBox.Show("Quantidade inválida.");
+                    return;
+                }
+
+                double precoInicialValor;
+                if (double.TryParse(precoInicial, out precoInicialValor))
+                {
+                    cmd.Parameters.AddWithValue("precoInicial", precoInicialValor);
+                }
+                else
+                {
+                    MessageBox.Show("Preço inicial inválido.");
+                    return;
+                }
+
+                double precoFinalValor;
+                if (double.TryParse(precoFinal, out precoFinalValor))
+                {
+                    cmd.Parameters.AddWithValue("precoFinal", precoFinalValor);
+                }
+                else
+                {
+                    MessageBox.Show("Preço final inválido.");
+                    return;
+                }
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show(idProduto != -1 ? "Produto atualizado com sucesso!" : "Produto adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar/atualizar produto: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         public tela_fornecedor_adicionar()
         {
             InitializeComponent();
@@ -171,37 +340,5 @@ namespace PIM3_SEMESTRE
             
         }
 
-        private void button_adicionar_Click_1(object sender, EventArgs e)
-        {
-            string nome = textBox_nome_empresa.Text;
-            string cnpj = textBox_cnpj.Text;
-            string telefone = textBox_telefone.Text;
-            string endereco = ObterEnderecoCompleto();
-            try
-            {
-                conn.Open();
-                string query = "INSERT INTO fornecedor (nomeFornecedor, cnpj, telefone, enderecoFornecedor, statusfornecedor) " +
-                               "VALUES (@nomefornecedor, @cnpj, @telefone, @endereco, @status)";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("nomeFornecedor", nome);
-                cmd.Parameters.AddWithValue("cnpj", cnpj);
-                cmd.Parameters.AddWithValue("telefone", telefone);
-                cmd.Parameters.AddWithValue("endereco", endereco);
-                cmd.Parameters.AddWithValue("status", 1);
-
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Fornecedor adicionado com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar fornecedor: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
     }
 }

@@ -83,7 +83,7 @@ namespace PIM3_SEMESTRE.produção
             }
         }
     
-    private void button_adicionar_Click(object sender, EventArgs e)
+        private void button_adicionar_Click(object sender, EventArgs e)
         {
             string nome = textBox_nome.Text;
             string categoria = textBox_categoria.Text;
