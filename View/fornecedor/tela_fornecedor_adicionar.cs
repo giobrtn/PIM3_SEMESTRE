@@ -199,10 +199,6 @@ namespace PIM3_SEMESTRE
             OnSairButtonClicked(EventArgs.Empty);
         }
 
-        private void button_adicionar_Click(object sender, EventArgs e)
-        {
-           
-        }
         protected virtual void OnCancelButtonClicked(EventArgs e)
         {
             CancelButtonClicked?.Invoke(this, e);

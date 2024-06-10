@@ -230,7 +230,7 @@
             this.button_adicionar.TabIndex = 0;
             this.button_adicionar.Text = "Adicionar";
             this.button_adicionar.UseVisualStyleBackColor = true;
-            this.button_adicionar.Click += new System.EventHandler(this.button_adicionar_Click_1);
+            this.button_adicionar.Click += new System.EventHandler(this.button_adicionar_Click);
             // 
             // label10
             // 

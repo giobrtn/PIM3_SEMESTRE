@@ -63,21 +63,6 @@ namespace PIM3_SEMESTRE.fornecedor
 
 
         }
-        private void button_editar_Click(object sender, EventArgs e)
-        {
-            if (dataGridView_fornecedor.SelectedRows.Count > 0)
-            {
-                int idFornecedor = Convert.ToInt32(dataGridView_fornecedor.SelectedRows[0].Cells["idproduto"].Value);
-
-                // Abrir a tela de edição com o ID do produto selecionado
-                tela_produção_adicionar telaEdicao = new tela_produção_adicionar(idFornecedor);
-                telaEdicao.Show();
-            }
-            else
-            {
-                MessageBox.Show("Selecione um produto para editar.");
-            }
-        }
 
         private void button_remover_Click(object sender, EventArgs e)
         {
@@ -112,7 +97,7 @@ namespace PIM3_SEMESTRE.fornecedor
             }
         }
 
-        private void button_adicionar_Click(object sender, EventArgs e)
+        private void button_editar_Click(object sender, EventArgs e)
         {
             if (dataGridView_fornecedor.SelectedRows.Count > 0)
             {
@@ -201,5 +186,11 @@ namespace PIM3_SEMESTRE.fornecedor
         {
 
         }
+
+        private void button_adicionar_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
