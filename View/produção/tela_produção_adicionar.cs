@@ -161,14 +161,15 @@ namespace PIM3_SEMESTRE.produção
             try
             {
                 conn.Open();
-                string query = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal) " +
-                               "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal)";
+                string query = "INSERT INTO produto (nomeproduto, categoria, tipo, estacaopreferencial, data, idUsuario, idFornecedor, quantidadeestoque, preco, precofinal, statusproduto) " +
+                               "VALUES (@nome, @categoria, @tipo, @estacaoPreferencial, @data, @usuario, @fornecedor, @quantidade, @precoInicial, @precoFinal, @status)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
 
                 cmd.Parameters.AddWithValue("nome", nome);
                 cmd.Parameters.AddWithValue("categoria", categoria);
                 cmd.Parameters.AddWithValue("tipo", tipo);
                 cmd.Parameters.AddWithValue("estacaoPreferencial", estacaoPreferencial);
+                cmd.Parameters.AddWithValue("status", 1);
 
                 DateTime dataConvertida;
                 if (DateTime.TryParse(data, out dataConvertida))

@@ -45,7 +45,7 @@ namespace PIM3_SEMESTRE.produção
         {
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM produto WHERE statusproduto != 0", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -125,6 +125,43 @@ namespace PIM3_SEMESTRE.produção
             SairButtonClicked?.Invoke(this, e);
         }
 
+        private void dataGridView_producao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button_remover_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_producao.SelectedRows.Count > 0)
+            {
+                int idProduto = Convert.ToInt32(dataGridView_producao.SelectedRows[0].Cells["idproduto"].Value);
+
+                try
+                {
+                    conn.Open();
+                    NpgsqlCommand cmd = new NpgsqlCommand("UPDATE produto SET statusproduto = 0 WHERE idproduto = @idproduto", conn);
+                    cmd.Parameters.AddWithValue("idproduto", idProduto);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Produto removido com sucesso!");
+
+
+                    dataGridView_producao.Rows.RemoveAt(dataGridView_producao.SelectedRows[0].Index);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao remover produto: " + ex.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para remover.");
+            }
+        }
     }
     
 }
