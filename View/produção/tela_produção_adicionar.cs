@@ -30,11 +30,16 @@ namespace PIM3_SEMESTRE.produção
                 "Uid=postgres;" +
                 "Pwd=dbadmin;");
         private int idProduto;
-        public tela_produção_adicionar(int idProduto)
+        public tela_produção_adicionar(int idProduto = -1)
         {
             InitializeComponent();
-            this.idProduto = idProduto;
-            CarregarDetalhesProduto(idProduto);
+            if (idProduto != -1)
+            {
+                this.idProduto = idProduto;
+                CarregarDetalhesProduto(idProduto);
+
+            }
+            
         }
 
         private void CarregarDetalhesProduto(int idProduto)

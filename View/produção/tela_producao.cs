@@ -171,7 +171,7 @@ namespace PIM3_SEMESTRE.produção
 
                 // Abrir a tela de edição com o ID do produto selecionado
                 tela_produção_adicionar telaEdicao = new tela_produção_adicionar(idProduto);
-                telaEdicao.ShowDialog();
+                telaEdicao.Show();
             }
             else
             {
