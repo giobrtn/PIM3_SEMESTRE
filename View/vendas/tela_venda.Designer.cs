@@ -158,7 +158,6 @@
             this.textBox_usuario.Name = "textBox_usuario";
             this.textBox_usuario.Size = new System.Drawing.Size(184, 31);
             this.textBox_usuario.TabIndex = 13;
-            this.textBox_usuario.TextChanged += new System.EventHandler(this.textBox_usuario_TextChanged);
             // 
             // label7
             // 
@@ -187,7 +186,6 @@
             this.textBox_pagamento.Name = "textBox_pagamento";
             this.textBox_pagamento.Size = new System.Drawing.Size(184, 31);
             this.textBox_pagamento.TabIndex = 8;
-            this.textBox_pagamento.TextChanged += new System.EventHandler(this.textBox_pagamento_TextChanged);
             // 
             // label4
             // 
@@ -225,7 +223,6 @@
             this.textBox_data.Name = "textBox_data";
             this.textBox_data.Size = new System.Drawing.Size(170, 31);
             this.textBox_data.TabIndex = 4;
-            this.textBox_data.TextChanged += new System.EventHandler(this.textBox_data_TextChanged);
             // 
             // label2
             // 
@@ -244,7 +241,6 @@
             this.textBox_cliente.Name = "textBox_cliente";
             this.textBox_cliente.Size = new System.Drawing.Size(260, 31);
             this.textBox_cliente.TabIndex = 2;
-            this.textBox_cliente.TextChanged += new System.EventHandler(this.textBox_cliente_TextChanged);
             // 
             // label1
             // 
