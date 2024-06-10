@@ -203,9 +203,39 @@ namespace PIM3_SEMESTRE.produção
                     return;
                 }
 
-                cmd.Parameters.AddWithValue("quantidade", quantidade);
-                cmd.Parameters.AddWithValue("precoInicial", precoInicial);
-                cmd.Parameters.AddWithValue("precoFinal", precoFinal);
+                int quantidadeValor;
+                if (int.TryParse(quantidade, out quantidadeValor))
+                {
+                    cmd.Parameters.AddWithValue("quantidade", quantidadeValor);
+                }
+                else
+                {
+                    MessageBox.Show("Quantidade inválida.");
+                    return;
+                }
+
+                
+                double precoInicialValor;
+                if (double.TryParse(precoInicial, out precoInicialValor))
+                {
+                    cmd.Parameters.AddWithValue("precoInicial", precoInicialValor);
+                }
+                else
+                {
+                    MessageBox.Show("Preço inicial inválido.");
+                    return;
+                }
+
+                double precoFinalValor;
+                if (double.TryParse(precoFinal, out precoFinalValor))
+                {
+                    cmd.Parameters.AddWithValue("precoFinal", precoFinalValor);
+                }
+                else
+                {
+                    MessageBox.Show("Preço final inválido.");
+                    return;
+                }
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Produto adicionado com sucesso!");
