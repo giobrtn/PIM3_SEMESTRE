@@ -111,14 +111,14 @@ namespace PIM3_SEMESTRE.cliente
                 if (idCliente != -1)
                 {
                     // Update query
-                    string updateQuery = "UPDATE cliente SET nomecliente = @nomecliente, cpf = @cnpj, telefone = @telefone, enderecocliente = @endereco, statuscliente = @status WHERE idcliente = @idcliente";
+                    string updateQuery = "UPDATE cliente SET nomecliente = @nomecliente, cnpj = @cnpj, telefone = @telefone, enderecocliente = @endereco, statuscliente = @status WHERE idcliente = @idcliente";
                     cmd = new NpgsqlCommand(updateQuery, conn);
                     cmd.Parameters.AddWithValue("idcliente", idCliente);
                 }
                 else
                 {
                     // Insert query
-                    string insertQuery = "INSERT INTO cliente (nomecliente, cpf, telefone, enderecocliente, statuscliente) " +
+                    string insertQuery = "INSERT INTO cliente (nomecliente, cnpj, telefone, enderecocliente, statuscliente) " +
                                          "VALUES (@nomecliente, @cnpj, @telefone, @endereco, @status)";
                     cmd = new NpgsqlCommand(insertQuery, conn);
                 }
