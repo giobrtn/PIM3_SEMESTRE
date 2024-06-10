@@ -39,8 +39,7 @@ namespace PIM3_SEMESTRE.produção
 
         private void CarregarDetalhesProduto(int idProduto)
         {
-            // Aqui você deve carregar os detalhes do produto com base no ID recebido
-            // e preencher os campos para edição
+            
             try
             {
                 conn.Open();
@@ -49,7 +48,7 @@ namespace PIM3_SEMESTRE.produção
                 NpgsqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    // Preencha os campos com os detalhes do produto
+                    
                     textBox_nome.Text = reader["nomeproduto"].ToString();
                     textBox_categoria.Text = reader["categoria"].ToString();
                     textBox_tipo.Text = reader["tipo"].ToString();
@@ -64,13 +63,13 @@ namespace PIM3_SEMESTRE.produção
                 else
                 {
                     MessageBox.Show("Produto não encontrado.");
-                    this.Close(); // Fechar a tela se o produto não for encontrado
+                    this.Close(); 
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar detalhes do produto: " + ex.Message);
-                this.Close(); // Fechar a tela em caso de erro
+                this.Close(); 
             }
             finally
             {
