@@ -45,7 +45,7 @@ namespace PIM3_SEMESTRE.vendas
 
             conn.Open();
 
-            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM fornecedor", conn);
+            NpgsqlCommand c1 = new NpgsqlCommand("SELECT * FROM pedidovenda", conn);
 
             NpgsqlDataReader dr = c1.ExecuteReader();
 
@@ -53,13 +53,13 @@ namespace PIM3_SEMESTRE.vendas
             {
                 DataTable dt = new DataTable();
                 dt.Load(dr);
-               //dataGridView_historico_venda.DataSource = dt;
+                //dataGridView_historico_venda.DataSource = dt;
             }
 
             conn.Close();
 
         }
-        
+
         private void button_notificacao_Click(object sender, EventArgs e)
         {
             OnNotificacaoButtonClicked(EventArgs.Empty);
@@ -199,15 +199,18 @@ namespace PIM3_SEMESTRE.vendas
             // Calculando o total da venda
             double totalVenda = quantidade * precoFinal;
 
+            // Calculando o total da venda
+            double totalVenda = quantidade * precoFinal;
+
             // Inserindo a venda no banco de dados
             try
             {
                 conn.Open();
-                string query = "INSERT INTO venda (idusuario, forma_pagamento, idproduto, data, quantidade, idcliente, total_venda, statuspedido) " +
+                string query = "INSERT INTO pedidovenda (idusuario, pagamento, idproduto, datavenda, quantidade, idcliente, totalvenda, statuspedido) " +
                                "VALUES (@idusuario, @formaPagamento, @idproduto, @data, @quantidade, @idcliente, @totalVenda, @statusPedido)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("idusuario", usuario);
-                cmd.Parameters.AddWithValue("formaPagamento", textBox_pagamento.Text);
+                cmd.Parameters.AddWithValue("pagamento", textBox_pagamento.Text);
                 cmd.Parameters.AddWithValue("idproduto", produto);
                 cmd.Parameters.AddWithValue("data", textBox_data.Text);
                 cmd.Parameters.AddWithValue("quantidade", quantidade);

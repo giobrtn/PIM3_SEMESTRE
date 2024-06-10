@@ -165,9 +165,9 @@
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(615, 311);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 25);
+            this.label7.Size = new System.Drawing.Size(95, 25);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Usuário";
+            this.label7.Text = "Usuário ID";
             // 
             // label6
             // 
@@ -212,9 +212,9 @@
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(99, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 25);
+            this.label3.Size = new System.Drawing.Size(100, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Produto";
+            this.label3.Text = "Produto ID";
             // 
             // textBox_data
             // 
