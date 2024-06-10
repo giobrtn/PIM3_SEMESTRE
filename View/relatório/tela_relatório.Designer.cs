@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button_notificacao = new System.Windows.Forms.Button();
             this.button_producao = new System.Windows.Forms.Button();
@@ -42,15 +42,15 @@
             this.button_fornecedor = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView_relatorio = new System.Windows.Forms.DataGridView();
-            this.button_imprimir = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
+            this.button_gerar = new System.Windows.Forms.Button();
             this.textBox_data = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_tipo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button_gerar = new System.Windows.Forms.Button();
+            this.dataGridView_relatorio = new System.Windows.Forms.DataGridView();
+            this.button_imprimir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_relatorio)).BeginInit();
@@ -201,45 +201,95 @@
             this.panel1.Size = new System.Drawing.Size(1065, 765);
             this.panel1.TabIndex = 27;
             // 
+            // button_gerar
+            // 
+            this.button_gerar.FlatAppearance.BorderSize = 0;
+            this.button_gerar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_gerar.Location = new System.Drawing.Point(846, 146);
+            this.button_gerar.Name = "button_gerar";
+            this.button_gerar.Size = new System.Drawing.Size(152, 52);
+            this.button_gerar.TabIndex = 24;
+            this.button_gerar.Text = "Gerar";
+            this.button_gerar.UseVisualStyleBackColor = true;
+            this.button_gerar.Click += new System.EventHandler(this.button_gerar_Click);
+            // 
+            // textBox_data
+            // 
+            this.textBox_data.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_data.Location = new System.Drawing.Point(369, 167);
+            this.textBox_data.Name = "textBox_data";
+            this.textBox_data.Size = new System.Drawing.Size(170, 31);
+            this.textBox_data.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(365, 127);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 25);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Data";
+            // 
+            // textBox_tipo
+            // 
+            this.textBox_tipo.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_tipo.Location = new System.Drawing.Point(65, 167);
+            this.textBox_tipo.Name = "textBox_tipo";
+            this.textBox_tipo.Size = new System.Drawing.Size(260, 31);
+            this.textBox_tipo.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(60, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 25);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Tipo";
+            // 
             // dataGridView_relatorio
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.DarkGreen;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_relatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridView_relatorio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView_relatorio.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_relatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView_relatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_relatorio.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_relatorio.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_relatorio.EnableHeadersVisualStyles = false;
             this.dataGridView_relatorio.GridColor = System.Drawing.Color.Black;
             this.dataGridView_relatorio.Location = new System.Drawing.Point(65, 247);
             this.dataGridView_relatorio.Name = "dataGridView_relatorio";
             this.dataGridView_relatorio.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_relatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_relatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_relatorio.RowHeadersVisible = false;
             this.dataGridView_relatorio.RowHeadersWidth = 62;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.DarkGray;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DimGray;
-            this.dataGridView_relatorio.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            this.dataGridView_relatorio.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView_relatorio.RowTemplate.Height = 28;
             this.dataGridView_relatorio.Size = new System.Drawing.Size(935, 395);
             this.dataGridView_relatorio.TabIndex = 19;
@@ -280,54 +330,6 @@
             this.button11.Size = new System.Drawing.Size(90, 74);
             this.button11.TabIndex = 30;
             this.button11.UseVisualStyleBackColor = false;
-            // 
-            // textBox_data
-            // 
-            this.textBox_data.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_data.Location = new System.Drawing.Point(369, 167);
-            this.textBox_data.Name = "textBox_data";
-            this.textBox_data.Size = new System.Drawing.Size(170, 31);
-            this.textBox_data.TabIndex = 23;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(365, 127);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 25);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Data";
-            // 
-            // textBox_tipo
-            // 
-            this.textBox_tipo.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_tipo.Location = new System.Drawing.Point(65, 167);
-            this.textBox_tipo.Name = "textBox_tipo";
-            this.textBox_tipo.Size = new System.Drawing.Size(260, 31);
-            this.textBox_tipo.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 25);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Tipo";
-            // 
-            // button_gerar
-            // 
-            this.button_gerar.FlatAppearance.BorderSize = 0;
-            this.button_gerar.Font = new System.Drawing.Font("Nirmala UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_gerar.Location = new System.Drawing.Point(846, 146);
-            this.button_gerar.Name = "button_gerar";
-            this.button_gerar.Size = new System.Drawing.Size(152, 52);
-            this.button_gerar.TabIndex = 24;
-            this.button_gerar.Text = "Gerar";
-            this.button_gerar.UseVisualStyleBackColor = true;
-            this.button_gerar.Click += new System.EventHandler(this.button_gerar_Click);
             // 
             // tela_relatório
             // 
