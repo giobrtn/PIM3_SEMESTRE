@@ -189,7 +189,7 @@ namespace PIM3_SEMESTRE.fornecedor
 
         private void button_adicionar_Click(object sender, EventArgs e)
         {
-
+            OnAddFornecedorButtonClicked(EventArgs.Empty);
         }
 
     }
