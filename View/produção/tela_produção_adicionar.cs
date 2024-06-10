@@ -29,123 +29,56 @@ namespace PIM3_SEMESTRE.produção
                 "Database=sistema;" +
                 "Uid=postgres;" +
                 "Pwd=dbadmin;");
-
-        public tela_produção_adicionar()
+        private int idProduto;
+        public tela_produção_adicionar(int idProduto)
         {
             InitializeComponent();
+            this.idProduto = idProduto;
+            CarregarDetalhesProduto(idProduto);
         }
 
-        /*
-        private void textBox_nome_TextChanged(object sender, EventArgs e)
+        private void CarregarDetalhesProduto(int idProduto)
         {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (nome) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
+            // Aqui você deve carregar os detalhes do produto com base no ID recebido
+            // e preencher os campos para edição
+            try
+            {
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM produto WHERE idproduto = @idproduto", conn);
+                cmd.Parameters.AddWithValue("idproduto", idProduto);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    // Preencha os campos com os detalhes do produto
+                    textBox_nome.Text = reader["nomeproduto"].ToString();
+                    textBox_categoria.Text = reader["categoria"].ToString();
+                    textBox_tipo.Text = reader["tipo"].ToString();
+                    textBox4_estacao_preferencial.Text = reader["estacaopreferencial"].ToString();
+                    textBox_data.Text = reader["data"].ToString();
+                    textBox_usuario.Text = reader["idusuario"].ToString();
+                    textBox_fornecedor.Text = reader["idfornecedor"].ToString();
+                    textBox_quantidade.Text = reader["quantidadeestoque"].ToString();
+                    textBox_preco_inicial.Text = reader["preco"].ToString();
+                    textBox_preco_final.Text = reader["precofinal"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Produto não encontrado.");
+                    this.Close(); // Fechar a tela se o produto não for encontrado
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar detalhes do produto: " + ex.Message);
+                this.Close(); // Fechar a tela em caso de erro
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
-
-        private void textBox_categoria_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (categoria) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_tipo_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (tipo) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox4_estacao_preferencial_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (estacaopreferencial) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_data_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (data) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_usuario_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (usuario) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_fornecedor_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (fornecedor) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_quantidade_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (quantidade) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_preco_inicial_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (precoinicial) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_preco_final_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO produto (precofinal) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        } */
-        private void button_adicionar_Click(object sender, EventArgs e)
+    
+    private void button_adicionar_Click(object sender, EventArgs e)
         {
             string nome = textBox_nome.Text;
             string categoria = textBox_categoria.Text;

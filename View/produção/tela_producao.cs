@@ -162,6 +162,22 @@ namespace PIM3_SEMESTRE.produção
                 MessageBox.Show("Selecione um produto para remover.");
             }
         }
+
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_producao.SelectedRows.Count > 0)
+            {
+                int idProduto = Convert.ToInt32(dataGridView_producao.SelectedRows[0].Cells["idproduto"].Value);
+
+                // Abrir a tela de edição com o ID do produto selecionado
+                tela_produção_adicionar telaEdicao = new tela_produção_adicionar(idProduto);
+                telaEdicao.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para editar.");
+            }
+        }
     }
     
 }
