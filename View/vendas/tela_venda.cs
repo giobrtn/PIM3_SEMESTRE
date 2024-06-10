@@ -59,40 +59,100 @@ namespace PIM3_SEMESTRE.vendas
             conn.Close();
 
         }
-        /*
         private void button_adicionar_Click(object sender, EventArgs e)
         {
-            string idCliente = textBox_cliente.Text;
-            string data = textBox_data.Text;
-            string pagamento = textBox_pagamento.Text;
-            string produto = textBox_produto.Text;
-            string quantidade = textBox_quantidade.Text;
+            if (string.IsNullOrWhiteSpace(textBox_usuario.Text) ||
+                string.IsNullOrWhiteSpace(textBox_pagamento.Text) ||
+                string.IsNullOrWhiteSpace(textBox_produto.Text) ||
+                string.IsNullOrWhiteSpace(textBox_data.Text) ||
+                string.IsNullOrWhiteSpace(textBox_quantidade.Text) ||
+                string.IsNullOrWhiteSpace(textBox_cliente.Text))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
+
+            int usuario;
+            if (!int.TryParse(textBox_usuario.Text, out usuario))
+            {
+                MessageBox.Show("Usuário inválido. Por favor, insira um valor numérico.");
+                return;
+            }
+
+            int produto;
+            if (!int.TryParse(textBox_produto.Text, out produto))
+            {
+                MessageBox.Show("Produto inválido. Por favor, insira um valor numérico.");
+                return;
+            }
+
+            int quantidade;
+            if (!int.TryParse(textBox_quantidade.Text, out quantidade))
+            {
+                MessageBox.Show("Quantidade inválida. Por favor, insira um valor numérico.");
+                return;
+            }
+
+            int cliente;
+            if (!int.TryParse(textBox_cliente.Text, out cliente))
+            {
+                MessageBox.Show("Cliente inválido. Por favor, insira um valor numérico.");
+                return;
+            }
+
+            double precoFinal;
             try
             {
                 conn.Open();
-                string query = "INSERT INTO fornecedor (nomeFornecedor, cnpj, telefone, enderecoFornecedor, statusfornecedor) " +
-                               "VALUES (@nomefornecedor, @cnpj, @telefone, @endereco, @status)";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("nomeFornecedor", nome);
-                cmd.Parameters.AddWithValue("cnpj", cnpj);
-                cmd.Parameters.AddWithValue("telefone", telefone);
-                cmd.Parameters.AddWithValue("endereco", endereco);
-                cmd.Parameters.AddWithValue("status", 1);
-
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Fornecedor adicionado com sucesso!");
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT precofinal FROM produto WHERE idproduto = @idproduto", conn);
+                cmd.Parameters.AddWithValue("idproduto", produto);
+                object result = cmd.ExecuteScalar();
+                if (result == null)
+                {
+                    MessageBox.Show("Produto não encontrado.");
+                    return;
+                }
+                precoFinal = Convert.ToDouble(result);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao adicionar fornecedor: " + ex.Message);
+                MessageBox.Show("Erro ao obter o valor do produto: " + ex.Message);
+                return;
             }
             finally
             {
                 conn.Close();
             }
-        }*/
+
+            double totalVenda = quantidade * precoFinal;
+
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO venda (idusuario, forma_pagamento, idproduto, data, quantidade, idcliente, total_venda, statuspedido) " +
+                               "VALUES (@idusuario, @formaPagamento, @idproduto, @data, @quantidade, @idcliente, @totalVenda, @statusPedido)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("idusuario", usuario);
+                cmd.Parameters.AddWithValue("formaPagamento", textBox_pagamento.Text);
+                cmd.Parameters.AddWithValue("idproduto", produto);
+                cmd.Parameters.AddWithValue("data", textBox_data.Text);
+                cmd.Parameters.AddWithValue("quantidade", quantidade);
+                cmd.Parameters.AddWithValue("idcliente", cliente);
+                cmd.Parameters.AddWithValue("totalVenda", totalVenda);
+                cmd.Parameters.AddWithValue("statusPedido", 1); // Status de pedido padrão (ativo)
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Venda adicionada com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar venda: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
         private void button_notificacao_Click(object sender, EventArgs e)
         {
             OnNotificacaoButtonClicked(EventArgs.Empty);
@@ -160,71 +220,7 @@ namespace PIM3_SEMESTRE.vendas
             SairButtonClicked?.Invoke(this, e);
         }
 
-        private void textBox_cliente_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (cliente) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_data_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (data) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_pagamento_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (pagamento) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_produto_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (produto) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_quantidade_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (quantidade) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
-
-        private void textBox_usuario_TextChanged(object sender, EventArgs e)
-        {
-            conn.Open();
-
-            NpgsqlCommand c1 = new NpgsqlCommand("INSERT INTO vendas (usuario) VALUES ()", conn);
-
-            NpgsqlDataReader dr = c1.ExecuteReader();
-
-            conn.Close();
-        }
+        
 
         private void button_confirmar_Click(object sender, EventArgs e)
         {
@@ -273,6 +269,70 @@ namespace PIM3_SEMESTRE.vendas
             {
                 conn.Close();
             }
+        }
+        private void textBox_quantidade_TextChanged(object sender, EventArgs e)
+        {
+            AtualizarTotalVenda();
+        }
+
+        private void textBox_produto_TextChanged(object sender, EventArgs e)
+        {
+            AtualizarTotalVenda();
+        }
+
+        private void AtualizarTotalVenda()
+        {
+            // Verificar se os campos obrigatórios estão preenchidos
+            if (string.IsNullOrWhiteSpace(textBox_quantidade.Text) ||
+                string.IsNullOrWhiteSpace(textBox_produto.Text))
+            {
+                return;
+            }
+
+            int produto;
+            if (!int.TryParse(textBox_produto.Text, out produto))
+            {
+                MessageBox.Show("Produto inválido. Por favor, insira um valor numérico.");
+                return;
+            }
+
+            int quantidade;
+            if (!int.TryParse(textBox_quantidade.Text, out quantidade))
+            {
+                MessageBox.Show("Quantidade inválida. Por favor, insira um valor numérico.");
+                return;
+            }
+
+            // Obtendo o valor do produto com base no ID
+            double precoFinal;
+            try
+            {
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT precofinal FROM produto WHERE idproduto = @idproduto", conn);
+                cmd.Parameters.AddWithValue("idproduto", produto);
+                object result = cmd.ExecuteScalar();
+                if (result == null)
+                {
+                    MessageBox.Show("Produto não encontrado.");
+                    return;
+                }
+                precoFinal = Convert.ToDouble(result);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao obter o valor do produto: " + ex.Message);
+                return;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            // Calculando o total da venda
+            double totalVenda = quantidade * precoFinal;
+
+            // Exibindo o total da venda no campo textBox_total_venda
+            textBox_total_venda.Text = totalVenda.ToString("F2"); // Formato com duas casas decimais
         }
     }
 }
