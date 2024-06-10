@@ -32,6 +32,21 @@ namespace PIM3_SEMESTRE.cliente
                 "Uid=postgres;" +
                 "Pwd=dbadmin;");
 
+        private int idCliente;
+
+        public tela_cliente_adicionar(int idCliente = -1)
+        {
+            InitializeComponent();
+            this.idCliente = idCliente;
+            if (idCliente != -1)
+            {
+
+                CarregarDetalhesCliente(idCliente);
+
+            }
+
+        }
+
         private string ObterEnderecoCompleto()
         {
             string logradouro = textBox_logradouro.Text;
@@ -39,6 +54,93 @@ namespace PIM3_SEMESTRE.cliente
             string cidade = textBox_cidade.Text;
 
             return $"{logradouro}, {numero}, {cidade}";
+        }
+
+        private void CarregarDetalhesCliente(int idCliente)
+        {
+
+            try
+            {
+                conn.Open();
+                NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM cliente WHERE idcliente = @idcliente", conn);
+                cmd.Parameters.AddWithValue("idcliente", idCliente);
+                NpgsqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+
+                    textBox_nome_empresa.Text = reader["nomecliente"].ToString();
+                    textBox_cnpj.Text = reader["cpf"].ToString();
+                    textBox_telefone.Text = reader["telefone"].ToString();
+                    string[] enderecoParts = reader["enderecocliente"].ToString().Split(',');
+                    if (enderecoParts.Length == 3)
+                    {
+                        textBox_logradouro.Text = enderecoParts[0].Trim();
+                        textBox_numero.Text = enderecoParts[1].Trim();
+                        textBox_cidade.Text = enderecoParts[2].Trim();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Cliente não encontrado.");
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar detalhes do cliente: " + ex.Message);
+                this.Close();
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        private void button_adicionar_Click(object sender, EventArgs e)
+        {
+            string nome = textBox_nome_empresa.Text;
+            string cnpj = textBox_cnpj.Text;
+            string telefone = textBox_telefone.Text;
+            string endereco = ObterEnderecoCompleto();
+
+            try
+            {
+                conn.Open();
+                NpgsqlCommand cmd;
+                if (idCliente != -1)
+                {
+                    // Update query
+                    string updateQuery = "UPDATE cliente SET nomecliente = @nomecliente, cpf = @cnpj, telefone = @telefone, enderecocliente = @endereco, statuscliente = @status WHERE idcliente = @idcliente";
+                    cmd = new NpgsqlCommand(updateQuery, conn);
+                    cmd.Parameters.AddWithValue("idcliente", idCliente);
+                }
+                else
+                {
+                    // Insert query
+                    string insertQuery = "INSERT INTO cliente (nomecliente, cpf, telefone, enderecocliente, statuscliente) " +
+                                         "VALUES (@nomecliente, @cnpj, @telefone, @endereco, @status)";
+                    cmd = new NpgsqlCommand(insertQuery, conn);
+                }
+
+                cmd.Parameters.AddWithValue("nomecliente", nome);
+                cmd.Parameters.AddWithValue("cnpj", cnpj);
+                cmd.Parameters.AddWithValue("telefone", telefone);
+                cmd.Parameters.AddWithValue("endereco", endereco);
+                cmd.Parameters.AddWithValue("status", 1);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show(idCliente != -1 ? "Cliente atualizado com sucesso!" : "Cliente adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar/atualizar cliente: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
         public tela_cliente_adicionar()
         {
@@ -82,10 +184,6 @@ namespace PIM3_SEMESTRE.cliente
             OnSairButtonClicked(EventArgs.Empty);
         }
 
-        private void button_adicionar_Click(object sender, EventArgs e)
-        {
-            OnAddClientButtonClicked(EventArgs.Empty);
-        }
         protected virtual void OnCancelButtonClick(EventArgs e)
         {
             CancelButtonClicked?.Invoke(this, e);
@@ -154,40 +252,6 @@ namespace PIM3_SEMESTRE.cliente
         private void textBox_cidade_TextChanged(object sender, EventArgs e)
         {
             
-        }
-
-        private void button_adicionar_Click_1(object sender, EventArgs e)
-        {
-            string nome = textBox_nome_empresa.Text;
-            string cnpj = textBox_cnpj.Text;
-            string telefone = textBox_telefone.Text;
-            string endereco = ObterEnderecoCompleto();
-            try
-            {
-                conn.Open();
-                string query = "INSERT INTO cliente (nomeCliente, cpf, telefone, enderecoCliente, statuscliente) " +
-                               "VALUES (@nomeCliente, @cnpj, @telefone, @endereco, @status)";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("nomeCliente", nome);
-                cmd.Parameters.AddWithValue("cnpj", cnpj);
-                cmd.Parameters.AddWithValue("telefone", telefone);
-                cmd.Parameters.AddWithValue("endereco", endereco);
-                cmd.Parameters.AddWithValue("status", 1);
-
-
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Cliente adicionado com sucesso!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao adicionar cliente: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

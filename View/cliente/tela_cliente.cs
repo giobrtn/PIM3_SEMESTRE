@@ -157,5 +157,21 @@ namespace PIM3_SEMESTRE.cliente
         {
             SairButtonClicked?.Invoke(this, e);
         }
+
+        private void button_editar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_clientes.SelectedRows.Count > 0)
+            {
+                int idCliente = Convert.ToInt32(dataGridView_clientes.SelectedRows[0].Cells["idcliente"].Value);
+
+                // Abrir a tela de edição com o ID do cliente selecionado
+                tela_cliente_adicionar telaEdicao = new tela_cliente_adicionar(idCliente);
+                telaEdicao.Show();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um cliente para editar.");
+            }
+        }
     }
 }

@@ -103,13 +103,13 @@ namespace PIM3_SEMESTRE.fornecedor
             {
                 int idFornecedor = Convert.ToInt32(dataGridView_fornecedor.SelectedRows[0].Cells["idfornecedor"].Value);
 
-                // Abrir a tela de edição com o ID do produto selecionado
-                tela_produção_adicionar telaEdicao = new tela_produção_adicionar(idFornecedor);
+                // Abrir a tela de edição com o ID do fornecedor selecionado
+                tela_fornecedor_adicionar telaEdicao = new tela_fornecedor_adicionar(idFornecedor);
                 telaEdicao.Show();
             }
             else
             {
-                MessageBox.Show("Selecione um produto para editar.");
+                MessageBox.Show("Selecione um fornecedor para editar.");
             }
         }
 
