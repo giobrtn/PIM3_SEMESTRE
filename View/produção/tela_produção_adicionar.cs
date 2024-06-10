@@ -181,8 +181,28 @@ namespace PIM3_SEMESTRE.produção
                     return;
                 }
 
-                cmd.Parameters.AddWithValue("usuario", usuario);
-                cmd.Parameters.AddWithValue("fornecedor", fornecedor);
+                int idUsuario;
+                if (int.TryParse(usuario, out idUsuario))
+                {
+                    cmd.Parameters.AddWithValue("usuario", idUsuario);
+                }
+                else
+                {
+                    MessageBox.Show("ID do usuário inválido.");
+                    return;
+                }
+
+                int idFornecedor;
+                if (int.TryParse(fornecedor, out idFornecedor))
+                {
+                    cmd.Parameters.AddWithValue("fornecedor", idFornecedor);
+                }
+                else
+                {
+                    MessageBox.Show("ID do fornecedor inválido.");
+                    return;
+                }
+
                 cmd.Parameters.AddWithValue("quantidade", quantidade);
                 cmd.Parameters.AddWithValue("precoInicial", precoInicial);
                 cmd.Parameters.AddWithValue("precoFinal", precoFinal);

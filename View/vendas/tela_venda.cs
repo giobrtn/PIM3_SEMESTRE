@@ -59,6 +59,40 @@ namespace PIM3_SEMESTRE.vendas
             conn.Close();
 
         }
+        /*
+        private void button_adicionar_Click(object sender, EventArgs e)
+        {
+            string idCliente = textBox_cliente.Text;
+            string data = textBox_data.Text;
+            string pagamento = textBox_pagamento.Text;
+            string produto = textBox_produto.Text;
+            string quantidade = textBox_quantidade.Text;
+            try
+            {
+                conn.Open();
+                string query = "INSERT INTO fornecedor (nomeFornecedor, cnpj, telefone, enderecoFornecedor, statusfornecedor) " +
+                               "VALUES (@nomefornecedor, @cnpj, @telefone, @endereco, @status)";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("nomeFornecedor", nome);
+                cmd.Parameters.AddWithValue("cnpj", cnpj);
+                cmd.Parameters.AddWithValue("telefone", telefone);
+                cmd.Parameters.AddWithValue("endereco", endereco);
+                cmd.Parameters.AddWithValue("status", 1);
+
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Fornecedor adicionado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao adicionar fornecedor: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }*/
         private void button_notificacao_Click(object sender, EventArgs e)
         {
             OnNotificacaoButtonClicked(EventArgs.Empty);
